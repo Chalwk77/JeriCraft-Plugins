@@ -1,0 +1,47 @@
+#========================================#
+#  Big Brother V1.0 - Configuration File
+#========================================#
+
+# Required in order to use /bigbrother:
+primary-permission: 'bigbrother.use'
+
+no-permission: '&cYou do not have permission to use this command.'
+toggle-message: '&7You have &6{status} &7{module}.'
+toggle-other: '&7You have &6{status} &7{module} for &6{player}&7.'
+invalid-player: '&cInvalid player.'
+
+# todo: Prevent hidden commands from being logged
+command-spy:
+  notification: '&3[&6&lCMD SPY&3] &7{player} &8> &7{cmd}'
+  toggle-permission: 'bigbrother.commandspy.toggle'
+  toggle-others-permission: 'bigbrother.commandspy.toggle.others'
+  aliases:
+    - 'cs'
+    - 'commandspy'
+
+# todo: clickable notification to teleport to the sign
+sign-spy:
+  notification: "&3[&6&lSIGN SPY&3] &7{player} &8> &7{line1} &8/ &7{line2} &8/ &7{line3} &8/ &7{line4}"
+  toggle-permission: 'bigbrother.signspy.toggle'
+  toggle-others-permission: 'bigbrother.signspy.toggle.others'
+  aliases:
+    - 'ss'
+    - 'signspy'
+
+# todo: clickable notification to teleport to the anvil
+anvil-spy:
+  notification: "&3[&6&lANVIL SPY&3] &7{player} &8> renamed &7{item} &8to &7{newname}"
+  toggle-permission: 'bigbrother.anvilspy.toggle'
+  toggle-others-permission: 'bigbrother.anvilspy.toggle.others'
+  aliases:
+    - 'as'
+    - 'anvilspy'
+
+# todo: clickable notification to teleport to the book
+book-spy:
+    notification: "&3[&6&lBOOK SPY&3] &7{player} &8> &7{text}"
+    toggle-permission: 'bigbrother.bookspy.toggle'
+    toggle-others-permission: 'bigbrother.bookspy.toggle.others'
+    aliases:
+        - 'bs'
+        - 'bookspy'
