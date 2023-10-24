@@ -27,14 +27,9 @@ public class CommandSpy {
     }
 
     private static boolean proceed(Player player) {
-
-        // Check if this player has permission to see command spy notifications:
         boolean permission = hasPerm(player, getString("primary-permission")) && hasPerm(player, getString("command-spy.toggle-permission"));
-        // Check if big brother is enabled for this player:
         boolean bbEnabled = PlayerDataManager.getData(player).activationState;
-        // Check if command spy is enabled for this player:
         boolean cspyEnabled = PlayerDataManager.getData(player).commands;
-
         return permission && bbEnabled && cspyEnabled;
     }
 }

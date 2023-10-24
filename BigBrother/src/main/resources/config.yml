@@ -9,20 +9,20 @@ on-disable: "[BigBrother] has been disabled"
 primary-permission: 'bigbrother.use'
 
 # Message omitted when (this) configuration is reload:
-config-reload: "&aBigBrother configuration has been reloaded"
+config-reload: "&3[&6&lBig Brother&3] &aconfiguration has been reloaded"
 
 # Required permission node to reload (this) configuration:
 reload-permission: "bigbrother.reload"
 
 # Message omitted when a player doesn't have permission to execute (any) BigBrother commnad:
-no-permission: '&cYou do not have permission to use this command.'
+no-permission: '&3[&6&lBig Brother&3] &cYou do not have permission to use this command.'
 
-invalid-module: "&cInvalid module. &7Valid modules: &6commands, signs, anvils, books, social"
+invalid-module: "&3[&6&lBig Brother&3] &cInvalid module. &7Valid modules: &6commands, signs, anvils, books, social"
 
 # Messages omitted when an admin toggles a module:
-toggle-message: '&7You have &6{state} &7{module}.'
-toggle-other: '&7You have &6{state} &7{module} for &6{player}&7.'
-invalid-player: '&cInvalid player.'
+toggle-message: '&3[&6&lBig Brother&3] &7You have &6{state} &7{module}.'
+toggle-other: '&3[&6&lBig Brother&3] &7You have &6{state} &7{module} for &6{player}&7.'
+invalid-player: '&3[&6&lBig Brother&3] &cInvalid player.'
 
 
 #================================================================#

@@ -14,14 +14,9 @@ import static com.chalwk.Misc.*;
 public class BookSpy implements Listener {
 
     private static boolean proceed(Player player) {
-
-        // Check if this player has permission to see book spy notifications:
         boolean permission = hasPerm(player, getString("primary-permission")) && hasPerm(player, getString("book-spy.toggle-permission"));
-        // Check if big brother is enabled for this player:
         boolean bbEnabled = PlayerDataManager.getData(player).activationState;
-        // Check if book spy is enabled for this player:
         boolean bspyEnabled = PlayerDataManager.getData(player).books;
-
         return permission && bbEnabled && bspyEnabled;
     }
 

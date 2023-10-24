@@ -13,14 +13,9 @@ import static com.chalwk.Misc.*;
 public class SignSpy implements Listener {
 
     private static boolean proceed(Player player) {
-
-        // Check if this player has permission to see sign spy notifications:
         boolean permission = hasPerm(player, getString("primary-permission")) && hasPerm(player, getString("sign-spy.toggle-permission"));
-        // Check if big brother is enabled for this player:
         boolean bbEnabled = PlayerDataManager.getData(player).activationState;
-        // Check if sign spy is enabled for this player:
         boolean sspyEnabled = PlayerDataManager.getData(player).signs;
-
         return permission && bbEnabled && sspyEnabled;
     }
 

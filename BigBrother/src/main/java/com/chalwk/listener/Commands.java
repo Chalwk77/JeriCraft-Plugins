@@ -147,7 +147,7 @@ public class Commands {
     }
 
     private static boolean perm(Player player, String permission) {
-        if (!(player.hasPermission(getString(permission)))) {
+        if (!(player.hasPermission(permission))) {
             send(player, formatMSG(getString("no-permission")));
             return false;
         }
