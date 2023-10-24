@@ -3,19 +3,14 @@ package com.chalwk.Spy;
 
 import com.chalwk.data.PlayerDataManager;
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.SignChangeEvent;
-import org.jetbrains.annotations.Nullable;
 
-import static com.chalwk.BigBrother.getPluginConfig;
 import static com.chalwk.Misc.*;
 
 public class SignSpy implements Listener {
-
-    private static final FileConfiguration config = getPluginConfig();
 
     private static boolean proceed(Player player) {
 
@@ -29,11 +24,6 @@ public class SignSpy implements Listener {
         return permission && bbEnabled && sspyEnabled;
     }
 
-    @Nullable
-    private static String getString(String s) {
-        return config.getString(s);
-    }
-
     @EventHandler
     public void onInteract(SignChangeEvent sign) {
 
@@ -45,14 +35,10 @@ public class SignSpy implements Listener {
 
                 String notification = getString("sign-spy.notification");
                 notification = notification.replace("{player}", playerName);
-
                 for (int i = 0; i < 4; i++) {
                     String line = sign.getLine(i);
-                    if (line.isEmpty()) {
-                        notification = notification.replace("{line" + i + "}", "");
-                        continue;
-                    }
-                    notification = notification.replace("{line" + i + "}", line);
+                    line = (line == null) ? "" : line;
+                    notification = notification.replace("{line" + (i + 1) + "}", line);
                 }
                 send(admin, formatMSG(notification));
             }

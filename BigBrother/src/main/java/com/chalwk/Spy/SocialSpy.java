@@ -5,11 +5,11 @@ import com.chalwk.data.PlayerDataManager;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 import static com.chalwk.BigBrother.getPluginConfig;
+import static com.chalwk.Misc.getString;
 import static com.chalwk.Misc.hasPerm;
 
 public class SocialSpy {
@@ -19,12 +19,15 @@ public class SocialSpy {
 
     public static boolean socialSpy(CommandSender sender, String command, String[] args) {
         Player player = (Player) sender;
+
+
         for (String s : socialCommands) {
             if (command.equalsIgnoreCase(s) && proceed(player)) {
+
                 String senderName = player.getName();
                 String commandArgs = command + " " + String.join(" ", args);
                 for (Player admin : player.getServer().getOnlinePlayers()) {
-                    if (!(admin.getName().equals(command)) && proceed(admin)) {
+                    if (!(admin.getName().equals(senderName)) && proceed(admin)) {
                         String notification = getString("social-spy.notification");
                         assert notification != null;
                         notification = notification
@@ -49,10 +52,5 @@ public class SocialSpy {
         boolean sspyEnabled = PlayerDataManager.getData(player).social;
 
         return permission && bbEnabled && sspyEnabled;
-    }
-
-    @Nullable
-    private static String getString(String s) {
-        return config.getString(s);
     }
 }

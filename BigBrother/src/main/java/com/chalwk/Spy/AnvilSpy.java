@@ -3,7 +3,6 @@ package com.chalwk.Spy;
 
 import com.chalwk.data.PlayerDataManager;
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -15,14 +14,10 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.jetbrains.annotations.Nullable;
 
-import static com.chalwk.BigBrother.getPluginConfig;
 import static com.chalwk.Misc.*;
 
 public class AnvilSpy implements Listener {
-
-    private static final FileConfiguration config = getPluginConfig();
 
     private static boolean proceed(Player player) {
 
@@ -34,11 +29,6 @@ public class AnvilSpy implements Listener {
         boolean espyEnabled = PlayerDataManager.getData(player).anvils;
 
         return permission && bbEnabled && espyEnabled;
-    }
-
-    @Nullable
-    private static String getString(String s) {
-        return config.getString(s);
     }
 
     @EventHandler(priority = EventPriority.MONITOR)
@@ -86,9 +76,9 @@ public class AnvilSpy implements Listener {
                     .replace("{newname}", itemDisplayName);
 
             for (Player admin : Bukkit.getOnlinePlayers()) {
-                if (!(admin.getName().equals(playerName)) && proceed(admin)) {
-                    send(admin, formatMSG(notification));
-                }
+                //if (!(admin.getName().equals(playerName)) && proceed(admin)) {
+                send(admin, formatMSG(notification));
+                //}
             }
         }
     }

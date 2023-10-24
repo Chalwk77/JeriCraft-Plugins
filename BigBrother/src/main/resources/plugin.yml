@@ -3,9 +3,63 @@ version: '${project.version}'
 main: com.chalwk.BigBrother
 api-version: '1.20'
 authors: [ chalwk ]
-Description: Big Brother is watching you!
-Commands:
+description: Big Brother is watching you!
+commands:
   bigbrother:
     description: Big Brother is watching you!
     usage: /<command>
     aliases: [ bb ]
+
+permissions:
+  bigbrother.*:
+    description: Gives access to all BigBrother commands
+    default: op
+    children:
+      bigbrother.use: true
+      bigbrother.reload: true
+      bigbrother.commandspy.toggle: true
+      bigbrother.commandspy.toggle.others: true
+      bigbrother.signspy.toggle: true
+      bigbrother.signspy.toggle.others: true
+      bigbrother.anvilspy.toggle: true
+      bigbrother.anvilspy.toggle.others: true
+      bigbrother.bookspy.toggle: true
+      bigbrother.bookspy.toggle.others: true
+      bigbrother.socialspy.toggle: true
+      bigbrother.socialspy.toggle.others: true
+  bigbrother.use:
+    description: Gives access to BigBrother command
+    default: op
+  bigbrother.reload:
+    description: Gives access to BigBrother reload command
+    default: op
+  bigbrother.commandspy.toggle:
+    description: Gives access to BigBrother command spy toggle command
+    default: op
+  bigbrother.commandspy.toggle.others:
+    description: Gives access to BigBrother command spy toggle others command
+    default: op
+  bigbrother.signspy.toggle:
+    description: Gives access to BigBrother sign spy toggle command
+    default: op
+  bigbrother.signspy.toggle.others:
+    description: Gives access to BigBrother sign spy toggle others command
+    default: op
+  bigbrother.anvilspy.toggle:
+    description: Gives access to BigBrother anvil spy toggle command
+    default: op
+  bigbrother.anvilspy.toggle.others:
+    description: Gives access to BigBrother anvil spy toggle others command
+    default: op
+  bigbrother.bookspy.toggle:
+    description: Gives access to BigBrother book spy toggle command
+    default: op
+  bigbrother.bookspy.toggle.others:
+    description: Gives access to BigBrother book spy toggle others command
+    default: op
+  bigbrother.socialspy.toggle:
+    description: Gives access to BigBrother social spy toggle command
+    default: op
+  bigbrother.socialspy.toggle.others:
+    description: Gives access to BigBrother social spy toggle others command
+    default: op

@@ -3,20 +3,15 @@ package com.chalwk.Spy;
 
 import com.chalwk.data.PlayerDataManager;
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerEditBookEvent;
-import org.jetbrains.annotations.Nullable;
 
-import static com.chalwk.BigBrother.getPluginConfig;
 import static com.chalwk.Misc.*;
 
 public class BookSpy implements Listener {
-
-    private static final FileConfiguration config = getPluginConfig();
 
     private static boolean proceed(Player player) {
 
@@ -28,11 +23,6 @@ public class BookSpy implements Listener {
         boolean bspyEnabled = PlayerDataManager.getData(player).books;
 
         return permission && bbEnabled && bspyEnabled;
-    }
-
-    @Nullable
-    private static String getString(String s) {
-        return config.getString(s);
     }
 
     @EventHandler(priority = EventPriority.MONITOR)

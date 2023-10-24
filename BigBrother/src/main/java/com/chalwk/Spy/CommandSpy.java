@@ -4,29 +4,23 @@ package com.chalwk.Spy;
 import com.chalwk.data.PlayerDataManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
-import org.jetbrains.annotations.Nullable;
 
-import static com.chalwk.BigBrother.getPluginConfig;
 import static com.chalwk.Misc.*;
 
 public class CommandSpy {
 
-    private static final FileConfiguration config = getPluginConfig();
-
-    public static void commandSpy(CommandSender sender, String command, String[] args) {
+    public static void commandSpy(CommandSender sender, String command) {
 
         String senderName = sender.getName();
-        String commandArgs = command + " " + String.join(" ", args);
 
         for (Player admin : Bukkit.getOnlinePlayers()) {
-            if (!(admin.getName().equals(command)) && proceed(admin)) {
+            if (!(admin.getName().equals(senderName)) && proceed(admin)) {
                 String notification = getString("command-spy.notification");
                 assert notification != null;
                 notification = notification
                         .replace("{player}", senderName)
-                        .replace("{cmd}", commandArgs);
+                        .replace("{cmd}", command);
                 send(admin, formatMSG(notification));
             }
         }
@@ -42,10 +36,5 @@ public class CommandSpy {
         boolean cspyEnabled = PlayerDataManager.getData(player).commands;
 
         return permission && bbEnabled && cspyEnabled;
-    }
-
-    @Nullable
-    private static String getString(String s) {
-        return config.getString(s);
     }
 }
