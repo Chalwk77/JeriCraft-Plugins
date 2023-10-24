@@ -5,7 +5,7 @@ package com.chalwk;
 import com.chalwk.Spy.AnvilSpy;
 import com.chalwk.Spy.BookSpy;
 import com.chalwk.Spy.SignSpy;
-import com.chalwk.commands.CommandManager;
+import com.chalwk.listener.Commands;
 import com.chalwk.listener.JoinListener;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -36,7 +36,6 @@ public final class BigBrother extends JavaPlugin {
         saveConfig();
 
         registerListeners();
-        getCommand("bigbrother").setExecutor(new CommandManager());
         Log("BigBrother has been enabled!");
     }
 
@@ -50,5 +49,6 @@ public final class BigBrother extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new SignSpy(), this);
         Bukkit.getPluginManager().registerEvents(new AnvilSpy(), this);
         Bukkit.getPluginManager().registerEvents(new BookSpy(), this);
+        Bukkit.getPluginManager().registerEvents(new Commands(), this);
     }
 }

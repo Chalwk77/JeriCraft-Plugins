@@ -7,6 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.jetbrains.annotations.Nullable;
 
 import static com.chalwk.BigBrother.getPluginConfig;
@@ -16,14 +17,13 @@ public class CommandSpy {
 
     private static final FileConfiguration config = getPluginConfig();
 
-    public static void Spy(CommandSender sender, Command command, String[] args) {
+    public static void commandSpy(CommandSender sender, String command, String[] args) {
 
         String senderName = sender.getName();
-        String commandName = command.getName();
-        String commandArgs = commandName + " " + String.join(" ", args);
+        String commandArgs = command + " " + String.join(" ", args);
 
         for (Player admin : Bukkit.getOnlinePlayers()) {
-            if (!(admin.getName().equals(commandName)) && proceed(admin)) {
+            if (!(admin.getName().equals(command)) && proceed(admin)) {
                 String notification = getString("command-spy.notification");
                 assert notification != null;
                 notification = notification
