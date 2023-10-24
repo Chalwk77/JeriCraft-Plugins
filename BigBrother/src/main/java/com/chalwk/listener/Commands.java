@@ -6,12 +6,14 @@ import com.chalwk.data.PlayerDataManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.chalwk.BigBrother.getPluginConfig;
@@ -20,19 +22,17 @@ import static com.chalwk.Spy.CommandSpy.commandSpy;
 import static com.chalwk.Spy.SocialSpy.socialSpy;
 import static com.chalwk.data.PlayerDataManager.getData;
 
-public class Commands implements CommandExecutor, Listener {
+public class Commands implements CommandExecutor, Listener, TabCompleter {
 
     private static final FileConfiguration config = getPluginConfig();
 
     private static final BigBrother instance = BigBrother.getInstance();
-
+    private static final List<String> hiddenCommands = config.getStringList("command-spy.hidden");
 
     @Nullable
     private static String getString(String s) {
         return config.getString(s);
     }
-
-    private static final List<String> hiddenCommands = config.getStringList("command-spy.hidden");
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
@@ -181,5 +181,16 @@ public class Commands implements CommandExecutor, Listener {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public @Nullable List<String> onTabComplete(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
+        ArrayList<String> tab = new ArrayList<>();
+        tab.add("commands");
+        tab.add("signs");
+        tab.add("anvils");
+        tab.add("books");
+        tab.add("social");
+        return tab;
     }
 }

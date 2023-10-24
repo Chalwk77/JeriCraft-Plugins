@@ -2,6 +2,9 @@
 #  Big Brother V1.0 - Configuration File
 #========================================#
 
+on-enable: "[BigBrother] has been enabled"
+on-disable: "[BigBrother] has been disabled"
+
 # Required in order to use /bigbrother:
 primary-permission: 'bigbrother.use'
 
@@ -47,9 +50,9 @@ anvil-spy:
 
 #================================================================#
 book-spy:
-    notification: "&3[&6&lBOOK SPY&3] &7{player} &8> &7{text}"
-    toggle-permission: 'bigbrother.bookspy.toggle'
-    toggle-others-permission: 'bigbrother.bookspy.toggle.others'
+  notification: "&3[&6&lBOOK SPY&3] &7{player} &8> &7{text}"
+  toggle-permission: 'bigbrother.bookspy.toggle'
+  toggle-others-permission: 'bigbrother.bookspy.toggle.others'
 #================================================================#
 
 

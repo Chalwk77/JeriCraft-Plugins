@@ -3,15 +3,12 @@ package com.chalwk.Spy;
 
 import com.chalwk.data.PlayerDataManager;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.SignChangeEvent;
 import org.jetbrains.annotations.Nullable;
-
-import java.awt.*;
 
 import static com.chalwk.BigBrother.getPluginConfig;
 import static com.chalwk.Misc.*;

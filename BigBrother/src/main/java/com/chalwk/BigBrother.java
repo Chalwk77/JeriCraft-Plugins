@@ -36,12 +36,12 @@ public final class BigBrother extends JavaPlugin {
         saveConfig();
 
         registerListeners();
-        Log("BigBrother has been enabled!");
+        Log(config.getString("on-enable"));
     }
 
     @Override
     public void onDisable() {
-        Log("BigBrother has been disabled!");
+        Log(config.getString("on-disable"));
     }
 
     private void registerListeners() {

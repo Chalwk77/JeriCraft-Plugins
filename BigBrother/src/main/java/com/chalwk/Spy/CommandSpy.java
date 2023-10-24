@@ -3,11 +3,9 @@ package com.chalwk.Spy;
 
 import com.chalwk.data.PlayerDataManager;
 import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
 import org.jetbrains.annotations.Nullable;
 
 import static com.chalwk.BigBrother.getPluginConfig;
