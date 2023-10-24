@@ -12,6 +12,7 @@ public class PlayerData {
     public boolean signs;
     public boolean anvils;
     public boolean books;
+    public boolean social;
 
     /***
      *  PlayerData constructor.
@@ -30,6 +31,7 @@ public class PlayerData {
         this.anvils = true;
         this.books = true;
         this.signs = true;
+        this.social = true;
     }
 
     public Player getPlayer() {
@@ -58,5 +60,9 @@ public class PlayerData {
 
     public void setSigns(boolean signs) {
         this.signs = signs;
+    }
+
+    public void setSocial(boolean social) {
+        this.social = social;
     }
 }
