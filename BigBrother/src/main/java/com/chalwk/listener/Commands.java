@@ -32,9 +32,7 @@ public class Commands implements CommandExecutor, Listener {
 
         if (!(sender instanceof Player)) {
             return true;
-        }
-
-        if (!command.getName().equalsIgnoreCase("bigbrother")) {
+        } else if (!command.getName().equalsIgnoreCase("bigbrother")) {
             commandSpy(sender, command.getName(), args);
             return true;
         }
@@ -56,6 +54,7 @@ public class Commands implements CommandExecutor, Listener {
         } else {
 
             String module = args[0].toLowerCase();
+
             switch (module) {
                 case "commands":
                     if (perm(player, getString("command-spy.toggle-permission"))) {
