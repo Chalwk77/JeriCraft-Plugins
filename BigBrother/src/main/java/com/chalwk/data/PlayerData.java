@@ -26,7 +26,7 @@ public class PlayerData {
      */
     public PlayerData(Player player) {
         this.player = player;
-        this.activationState = false;
+        this.activationState = true;
         this.commands = true;
         this.anvils = true;
         this.books = true;

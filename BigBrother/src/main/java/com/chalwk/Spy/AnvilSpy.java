@@ -58,17 +58,15 @@ public class AnvilSpy implements Listener {
 
         ItemMeta meta = item.getItemMeta();
         if (meta != null && meta.hasDisplayName()) {
-
-            String itemDisplayName = meta.getDisplayName();
             String playerName = player.getName();
-            String notification = getString("anvil-spy.notification");
-            notification = notification
-                    .replace("{player}", playerName)
-                    .replace("{item}", item.getType().toString())
-                    .replace("{newname}", itemDisplayName);
-
             for (Player admin : Bukkit.getOnlinePlayers()) {
                 if (!(admin.getName().equals(playerName)) && proceed(admin)) {
+                    String notification = getString("anvil-spy.notification");
+                    String itemDisplayName = meta.getDisplayName();
+                    notification = notification
+                            .replace("{player}", playerName)
+                            .replace("{item}", item.getType().toString())
+                            .replace("{newname}", itemDisplayName);
                     send(admin, formatMSG(notification));
                 }
             }

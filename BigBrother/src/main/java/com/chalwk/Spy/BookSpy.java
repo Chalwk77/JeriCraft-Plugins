@@ -26,11 +26,10 @@ public class BookSpy implements Listener {
         Player player = event.getPlayer();
         String playerName = player.getName();
 
-        String text = event.getNewBookMeta().toString().substring(0, event.getNewBookMeta().toString().length() - 1);
-
         for (Player admin : Bukkit.getOnlinePlayers()) {
             if (!(admin.getName().equals(playerName)) && proceed(admin)) {
 
+                String text = event.getNewBookMeta().toString().substring(0, event.getNewBookMeta().toString().length() - 1);
                 String notification = getString("book-spy.notification");
                 assert notification != null;
 

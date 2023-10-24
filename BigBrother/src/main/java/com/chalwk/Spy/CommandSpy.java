@@ -11,9 +11,7 @@ import static com.chalwk.Misc.*;
 public class CommandSpy {
 
     public static void commandSpy(CommandSender sender, String command) {
-
         String senderName = sender.getName();
-
         for (Player admin : Bukkit.getOnlinePlayers()) {
             if (!(admin.getName().equals(senderName)) && proceed(admin)) {
                 String notification = getString("command-spy.notification");
