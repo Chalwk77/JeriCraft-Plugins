@@ -11,11 +11,12 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
-import static com.chalwk.Misc.Log;
+import static com.chalwk.Misc.*;
 import static com.chalwk.listener.Commands.commandHandler;
 
 public final class BigBrother extends JavaPlugin implements Listener {
@@ -60,7 +61,12 @@ public final class BigBrother extends JavaPlugin implements Listener {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        commandHandler(sender, args);
+        Player player = (Player) sender;
+        if (hasPerm(player, (getString("primary-permission")))) {
+            commandHandler(sender, args);
+        } else {
+            send(player, formatMSG(getString("no-permission")));
+        }
         return true;
     }
 }

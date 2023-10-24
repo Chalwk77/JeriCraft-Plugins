@@ -16,6 +16,8 @@ public class Commands {
 
     private static final FileConfiguration config = getPluginConfig();
     private static final BigBrother instance = BigBrother.getInstance();
+    private static final String toggleMessage = getString("toggle-message");
+    private static final String toggleAllMessage = getString("toggle-all-message");
 
     public static boolean commandHandler(CommandSender sender, String[] args) {
 
@@ -29,12 +31,6 @@ public class Commands {
             boolean anvils = getData(player).anvils;
             boolean books = getData(player).books;
             boolean social = getData(player).social;
-
-            String toggleMessage = getString("toggle-message");
-            assert toggleMessage != null;
-
-            String toggleAllMessage = getString("toggle-all-message");
-            assert toggleAllMessage != null;
 
             if (args.length == 0) {
                 boolean activationState = getData(player).getActivationState();
