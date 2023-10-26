@@ -1,0 +1,10 @@
+#======================================#
+#  NightVision V1.0 - Configuration File
+#======================================#
+
+on-enable: "[NightVision] has been enabled"
+on-disable: "[NightVision] has been disabled"
+config-reload: "[lNightVision] Configuration reloaded."
+no-permission: '&3[&6&lNightVision&3] &CYou do not have permission to use this command.'
+toggle-message: '&3[&6&lNightVision&3] &7You have &6{state} &7{module}.'
+help: '&3[&6&lNightVision&3] &7Commands: &6/nightvision, /nightvision reload, /nightvision help'

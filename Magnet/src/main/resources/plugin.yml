@@ -1,6 +1,6 @@
 name: magnet
 version: '${project.version}'
-main: com.chalwk.magnet
+main: com.chalwk.Magnet
 api-version: '1.20'
 authors: [ chalwk ]
 description: Magnetize items toward you!

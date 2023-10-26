@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/BigBrother/BigBrother.iml" filepath="$PROJECT_DIR$/BigBrother/BigBrother.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JeriCraft-Plugins.iml" filepath="$PROJECT_DIR$/.idea/JeriCraft-Plugins.iml" />
       <module fileurl="file://$PROJECT_DIR$/JeriCraft-Perks-GUI/JeriCraftPerkGUI.iml" filepath="$PROJECT_DIR$/JeriCraft-Perks-GUI/JeriCraftPerkGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NightVision/NightVision.iml" filepath="$PROJECT_DIR$/NightVision/NightVision.iml" />
       <module fileurl="file://$PROJECT_DIR$/Magnet/magnet.iml" filepath="$PROJECT_DIR$/Magnet/magnet.iml" />
     </modules>
   </component>
