@@ -68,7 +68,7 @@ public class Commands {
 
     private static void notify(Player sender, boolean books) {
         String message = toggleMessage
-                .replace("{state}", books ? "enabled" : "disabled")
+                .replace("{state}", books ? "disabled" : "enabled")
                 .replace("{module}", "Night Vision");
         send(sender, formatMSG(message));
     }

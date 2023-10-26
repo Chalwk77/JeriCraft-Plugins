@@ -21,7 +21,7 @@ public class PlayerData {
      */
     public PlayerData(Player player) {
         this.player = player;
-        this.activationState = true;
+        this.activationState = false;
     }
 
     public Player getPlayer() {
