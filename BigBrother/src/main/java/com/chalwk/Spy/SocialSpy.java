@@ -10,10 +10,13 @@ import static com.chalwk.Misc.*;
 public class SocialSpy {
 
     public static boolean socialSpy(CommandSender sender, String command) {
+
         Player player = (Player) sender;
         String senderName = player.getName();
+
         for (Player admin : player.getServer().getOnlinePlayers()) {
             if (!admin.getName().equals(senderName) && proceed(admin)) {
+
                 String notification = getString("social-spy.notification");
                 assert notification != null;
                 notification = notification

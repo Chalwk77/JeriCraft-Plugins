@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JeriCraftPerkGUI" />
+        <module name="magnet" />
         <module name="BigBrother" />
       </profile>
     </annotationProcessing>

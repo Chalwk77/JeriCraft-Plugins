@@ -38,9 +38,7 @@ public class AnvilSpy implements Listener {
             return;
         }
 
-        Player player = (Player) ent;
         Inventory inventory = event.getInventory();
-
         if (!(inventory instanceof AnvilInventory)) {
             return;
         }
@@ -56,6 +54,7 @@ public class AnvilSpy implements Listener {
             return;
         }
 
+        Player player = (Player) ent;
         ItemMeta meta = item.getItemMeta();
         if (meta != null && meta.hasDisplayName()) {
             String playerName = player.getName();
