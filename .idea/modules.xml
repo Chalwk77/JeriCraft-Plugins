@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BigBrother/BigBrother.iml" filepath="$PROJECT_DIR$/BigBrother/BigBrother.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HealMe/HealMe.iml" filepath="$PROJECT_DIR$/HealMe/HealMe.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JeriCraft-Plugins.iml" filepath="$PROJECT_DIR$/.idea/JeriCraft-Plugins.iml" />
       <module fileurl="file://$PROJECT_DIR$/JeriCraft-Perks-GUI/JeriCraftPerkGUI.iml" filepath="$PROJECT_DIR$/JeriCraft-Perks-GUI/JeriCraftPerkGUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/Magnet/Magnet.iml" filepath="$PROJECT_DIR$/Magnet/Magnet.iml" />

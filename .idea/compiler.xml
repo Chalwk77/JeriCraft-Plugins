@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="JeriCraftPerkGUI" />
         <module name="NightVision" />
+        <module name="HealMe" />
         <module name="Magnet" />
         <module name="BigBrother" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Feed" target="1.8" />
       <module name="magnet" target="1.8" />
     </bytecodeTargetLevel>
   </component>

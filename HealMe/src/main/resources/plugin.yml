@@ -1,0 +1,37 @@
+name: HealMe
+version: '${project.version}'
+main: com.chalwk.HealMe
+api-version: '1.20'
+authors: [ chalwk ]
+description: Low on health or hunger? HealMe is the plugin for you!
+commands:
+  heal:
+    description: Heals the player to max health!
+    usage: /<command>
+    aliases: [ healme, h ]
+  feed:
+    description: Feeds the player to max hunger!
+    usage: /<command>
+    aliases: [ feedme, f ]
+  healme_reload:
+    description: Reloads the HealMe config file
+    usage: /<command>
+    aliases: [ hrl ]
+
+permissions:
+  healme.*:
+    description: Gives access to all HealMe commands
+    default: op
+    children:
+      healme.health: true
+      healme.hunger: true
+      healme.reload: true
+  healme.health:
+    description: Gives access to the /heal command
+    default: op
+  healme.hunger:
+    description: Gives access to the /feed command
+    default: op
+  healme.reload:
+    description: Gives access to the /healme reload command
+    default: op

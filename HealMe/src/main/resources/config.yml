@@ -1,0 +1,16 @@
+#=================================#
+#  HealMe V1.0 - Configuration File
+#=================================#
+
+on-enable: "[HealMe] has been enabled"
+on-disable: "[HealMe] has been disabled"
+config-reload: "[HealMe] Configuration reloaded."
+no-permission: '&3[&6&lHealMe&3] &CYou do not have permission to use this command.'
+
+heal-message: '&3[&6&lHealMe&3] &7Health restored.'
+health-already-full: '&3[&6&lHealMe&3] &7Your health is already full.'
+
+feed-message: '&3[&6&lHealMe&3] &7Hunger restored.'
+hunger-already-full: '&3[&6&lHealMe&3] &7Your hunger is already full.'
+
+survival-mode-only: '&3[&6&lHealMe&3] &7You must be in survival mode to use this command.'
