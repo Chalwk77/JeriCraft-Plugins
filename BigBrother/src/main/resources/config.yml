@@ -27,7 +27,7 @@ invalid-player: '&3[&6&lBig Brother&3] &cInvalid player.'
 
 #================================================================#
 command-spy:
-  notification: '&3[&6&lCMD SPY&3] &7{player} &8> &7{cmd}'
+  notification: '&3[&6&lCMD SPY&3] &7{player}: &7{cmd}'
   toggle-permission: 'bigbrother.commandspy.toggle'
   toggle-others-permission: 'bigbrother.commandspy.toggle.others'
   hidden:
@@ -48,7 +48,7 @@ sign-spy:
 
 #================================================================#
 anvil-spy:
-  notification: "&3[&6&lANVIL SPY&3] &7{player} &8> renamed &7{item} &8to &7{newname}"
+  notification: "&3[&6&lANVIL SPY&3] &7{player} renamed &b{item} &7to &b{newname}"
   toggle-permission: 'bigbrother.anvilspy.toggle'
   toggle-others-permission: 'bigbrother.anvilspy.toggle.others'
 #================================================================#
@@ -56,7 +56,7 @@ anvil-spy:
 
 #================================================================#
 book-spy:
-  notification: "&3[&6&lBOOK SPY&3] &7{player} &8> &7{text}"
+  notification: "&3[&6&lBOOK SPY&3] &7{player}: &7{text}"
   toggle-permission: 'bigbrother.bookspy.toggle'
   toggle-others-permission: 'bigbrother.bookspy.toggle.others'
 #================================================================#
