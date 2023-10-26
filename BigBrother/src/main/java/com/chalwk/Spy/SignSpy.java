@@ -22,23 +22,26 @@ public class SignSpy implements Listener {
     @EventHandler
     public void onInteract(SignChangeEvent sign) {
 
+        if (sign.getLine(0).isEmpty()
+                && sign.getLine(1).isEmpty()
+                && sign.getLine(2).isEmpty()
+                && sign.getLine(3).isEmpty()) {
+            return;
+        }
+
         Player player = sign.getPlayer();
         String playerName = player.getName();
 
-        for (Player admin : Bukkit.getOnlinePlayers()) {
-            if (!(admin.getName().equals(playerName)) && proceed(admin)) {
+        String notification = getString("sign-spy.notification");
+        notification = notification.replace("{player}", playerName);
+        for (int i = 0; i < 4; i++) {
+            String line = sign.getLine(i);
+            notification = notification.replace("{line" + (i + 1) + "}", line);
+        }
 
-                String notification = getString("sign-spy.notification");
-                notification = notification.replace("{player}", playerName);
-                for (int i = 0; i < 4; i++) {
-                    String line = sign.getLine(i);
-                    notification = notification.replace("{line" + (i + 1) + "}", line);
-                }
-                if (notification.isEmpty()) {
-                    return;
-                }
+        for (Player admin : Bukkit.getOnlinePlayers()) {
+            if (!(admin.getName().equals(playerName)) && proceed(admin))
                 send(admin, formatMSG(notification));
-            }
         }
     }
 }
