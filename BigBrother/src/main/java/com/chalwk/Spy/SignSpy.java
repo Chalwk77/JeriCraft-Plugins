@@ -32,8 +32,10 @@ public class SignSpy implements Listener {
                 notification = notification.replace("{player}", playerName);
                 for (int i = 0; i < 4; i++) {
                     String line = sign.getLine(i);
-                    line = (line == null) ? "" : line;
                     notification = notification.replace("{line" + (i + 1) + "}", line);
+                }
+                if (notification.isEmpty()) {
+                    return;
                 }
                 send(admin, formatMSG(notification));
             }
