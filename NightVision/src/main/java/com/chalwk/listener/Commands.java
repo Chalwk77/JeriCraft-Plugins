@@ -9,6 +9,8 @@ import org.bukkit.Sound;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import static com.chalwk.Misc.*;
 import static com.chalwk.NightVision.getPluginConfig;
@@ -57,11 +59,16 @@ public class Commands {
         Location loc = player.getLocation();
         player.playSound(loc, Sound.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, 0.0F);
         loc.getWorld().playEffect(loc, Effect.MOBSPAWNER_FLAMES, 2004);
+        if (player.hasPotionEffect(PotionEffectType.NIGHT_VISION)) {
+            player.removePotionEffect(PotionEffectType.NIGHT_VISION);
+            return;
+        }
+        player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 100000, 1));
     }
 
     private static void notify(Player sender, boolean books) {
         String message = toggleMessage
-                .replace("{state}", books ? "disabled" : "enabled")
+                .replace("{state}", books ? "enabled" : "disabled")
                 .replace("{module}", "Night Vision");
         send(sender, formatMSG(message));
     }

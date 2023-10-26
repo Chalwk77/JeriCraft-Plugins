@@ -2,6 +2,7 @@
 
 package com.chalwk;
 
+import com.chalwk.listener.JoinListener;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -37,6 +38,7 @@ public final class NightVision extends JavaPlugin implements Listener {
         config.options().copyDefaults(true);
         saveConfig();
 
+        Bukkit.getPluginManager().registerEvents(new JoinListener(), this);
         Bukkit.getPluginManager().registerEvents(this, this);
         Log("Night Vision is enabled!");
     }

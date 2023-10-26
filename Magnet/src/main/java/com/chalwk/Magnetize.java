@@ -9,7 +9,7 @@ import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import javax.xml.stream.Location;
+import org.bukkit.Location;
 import java.util.Iterator;
 
 public class Magnetize implements Runnable {
@@ -22,6 +22,7 @@ public class Magnetize implements Runnable {
 
     @Override
     public void run() {
+
         Iterator<World> worlds = Bukkit.getWorlds().iterator();
         repeat:
         while (worlds.hasNext()) {
@@ -45,7 +46,7 @@ public class Magnetize implements Runnable {
 
                             item = (Item) entity;
                             stack = item.getItemStack();
-                            location = (Location) item.getLocation();
+                            location = item.getLocation();
                         } while (stack.getAmount() <= 0);
                     } while (item.isDead());
                 } while (item.getPickupDelay() > item.getTicksLived());
@@ -56,7 +57,7 @@ public class Magnetize implements Runnable {
                 for (Player player : Bukkit.getOnlinePlayers()) {
                     if (!PlayerDataManager.getData(player).activationState || !player.getWorld().getName().equals(world.getName()))
                         continue;
-                    double playerDistance = player.getLocation().distance((org.bukkit.Location) location);
+                    double playerDistance = player.getLocation().distance(location);
                     if (playerDistance < distanceSmall) {
                         distanceSmall = playerDistance;
                         closestPlayer = player;

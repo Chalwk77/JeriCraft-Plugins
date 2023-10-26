@@ -1,0 +1,25 @@
+name: NightVision
+version: '1.0-SNAPSHOT'
+main: com.chalwk.NightVision
+api-version: '1.20'
+authors: [ chalwk ]
+description: See in the dark!
+commands:
+  nightvision:
+    description: Allows you to see in the dark
+    usage: /<command>
+    aliases: [ nv ]
+
+permissions:
+  nightvision.*:
+    description: Gives access to all Night Vision commands
+    default: op
+    children:
+      nightvision.use: true
+      nightvision.reload: true
+  nightvision.use:
+    description: Gives access to Night Vision command
+    default: op
+  nightvision.reload:
+    description: Gives access to Night Vision reload command
+    default: op

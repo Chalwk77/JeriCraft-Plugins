@@ -2,6 +2,7 @@
 
 package com.chalwk;
 
+import com.chalwk.listener.JoinListener;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -39,6 +40,7 @@ public final class Magnet extends JavaPlugin implements Listener {
 
         Bukkit.getPluginManager().registerEvents(this, this);
         Log("Magnet is enabled!");
+        Bukkit.getPluginManager().registerEvents(new JoinListener(), this);
         this.getServer().getScheduler().scheduleSyncRepeatingTask(this, new Magnetize(), 5L, 5L);
     }
 

@@ -8,9 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="JeriCraftPerkGUI" />
         <module name="NightVision" />
-        <module name="magnet" />
+        <module name="Magnet" />
         <module name="BigBrother" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="magnet" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
