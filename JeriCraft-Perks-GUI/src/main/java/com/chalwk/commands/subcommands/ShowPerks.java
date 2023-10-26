@@ -11,6 +11,7 @@ import static com.chalwk.gui.Menu.showMenu;
 public class ShowPerks extends SubCommand {
 
     private static final FileConfiguration config = getPluginConfig();
+
     @Override
     public String getName() {
         return "show";

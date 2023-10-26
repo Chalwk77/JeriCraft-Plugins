@@ -10,8 +10,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
-import static com.chalwk.NightVision.getPluginConfig;
 import static com.chalwk.Misc.*;
+import static com.chalwk.NightVision.getPluginConfig;
 import static com.chalwk.data.PlayerDataManager.getData;
 
 public class Commands {

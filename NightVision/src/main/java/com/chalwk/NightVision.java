@@ -24,7 +24,7 @@ public final class NightVision extends JavaPlugin implements Listener {
     }
 
     public static NightVision getInstance() {
-            return instance;
+        return instance;
     }
 
     @Override

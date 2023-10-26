@@ -35,6 +35,30 @@ public class CustomGUI {
         this.inventory = Bukkit.createInventory(null, rows * 9, title);
     }
 
+    public static void renderPerkButton(String name, String icon, List<String> lore, CustomGUI menu, int slot) {
+        ItemStack item = menu.createItem(icon, name, lore, true);
+        GUIButton button = new GUIButton(item);
+        button.setAction(() -> {
+        });
+        menu.setItem(button, slot);
+    }
+
+    @NotNull
+    public static Categories RenderCategories(Map<?, ?> opt, CustomGUI menu, int slot) {
+        List<String> type = new ArrayList<>((Collection<? extends String>) opt.keySet());
+        String category = type.get(0);
+        Map<?, ?> data = (Map<?, ?>) opt.get(category);
+
+        String name = (String) data.get("title");               // category title
+        String icon = (String) data.get("icon");                // category icon
+        List<String> lore = (List<String>) data.get("lore");    // category lore
+
+        ItemStack item = menu.createItem(icon, name, lore, true);
+        GUIButton button = new GUIButton(item);
+        menu.setItem(button, slot);
+        return new Categories(data, button);
+    }
+
     public void setItem(GUIButton button, int slot) {
         buttons.add(button);
         inventory.setItem(slot, button.getStack());
@@ -116,28 +140,8 @@ public class CustomGUI {
         return item;
     }
 
-    public static void renderPerkButton(String name, String icon, List<String> lore, CustomGUI menu, int slot) {
-        ItemStack item = menu.createItem(icon, name, lore, true);
-        GUIButton button = new GUIButton(item);
-        button.setAction(() -> {
-        });
-        menu.setItem(button, slot);
-    }
-
-    @NotNull
-    public static Categories RenderCategories(Map<?, ?> opt, CustomGUI menu, int slot) {
-        List<String> type = new ArrayList<>((Collection<? extends String>) opt.keySet());
-        String category = type.get(0);
-        Map<?, ?> data = (Map<?, ?>) opt.get(category);
-
-        String name = (String) data.get("title");               // category title
-        String icon = (String) data.get("icon");                // category icon
-        List<String> lore = (List<String>) data.get("lore");    // category lore
-
-        ItemStack item = menu.createItem(icon, name, lore, true);
-        GUIButton button = new GUIButton(item);
-        menu.setItem(button, slot);
-        return new Categories(data, button);
+    public boolean getItem(int i) {
+        return inventory.getItem(i) != null;
     }
 
     public static class Categories {
@@ -150,9 +154,5 @@ public class CustomGUI {
             this.button = button;
             this.title = (String) data.get("title");
         }
-    }
-
-    public boolean getItem(int i) {
-        return inventory.getItem(i) != null;
     }
 }

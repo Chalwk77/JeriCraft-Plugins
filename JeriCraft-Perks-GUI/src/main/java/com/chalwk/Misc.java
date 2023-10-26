@@ -10,7 +10,7 @@ public class Misc {
     }
 
     public static void sound(Player player, String sound) {
-        player.playSound(player.getLocation(), sound, 1,1);
+        player.playSound(player.getLocation(), sound, 1, 1);
     }
 
     public static String formatMSG(String message) {

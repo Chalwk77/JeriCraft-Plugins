@@ -11,8 +11,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class JeriCraftPerkGUI extends JavaPlugin {
 
-    static JeriCraftPerkGUI instance;
     public static FileConfiguration config;
+    static JeriCraftPerkGUI instance;
+
     public static FileConfiguration getPluginConfig() {
         return config;
     }

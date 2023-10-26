@@ -6,19 +6,16 @@ import com.chalwk.gui.CustomGUI;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class PlayerData {
 
+    private final Player player;
     private ItemStack head;
     private int moneySpent;
-    private final Player player;
     private CustomGUI openGUI;
 
     public PlayerData(Player player) {
@@ -34,16 +31,16 @@ public class PlayerData {
         return moneySpent;
     }
 
+    public void setMoneySpent(int i) {
+        this.moneySpent = i;
+    }
+
     public CustomGUI getOpenGUI() {
         return openGUI;
     }
 
     public void setOpenGUI(CustomGUI openGUI) {
         this.openGUI = openGUI;
-    }
-
-    public void setMoneySpent(int i) {
-        this.moneySpent = i;
     }
 
     public void setHead(List<String> lore, String displayName) {

@@ -5,11 +5,11 @@
 Commands:
 
 - `/perks show` - Opens the Perks GUI
-  - Permission: `perks.show`
-  - Shows the Perks GUI
+    - Permission: `perks.show`
+    - Shows the Perks GUI
 - `/perks reload` - Reloads the config
-  - Permission: `perks.reload`
-  - Reloads the config
+    - Permission: `perks.reload`
+    - Reloads the config
 
 Additional commands coming soon!
 

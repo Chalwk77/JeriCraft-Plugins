@@ -24,7 +24,7 @@ public final class Magnet extends JavaPlugin implements Listener {
     }
 
     public static Magnet getInstance() {
-            return instance;
+        return instance;
     }
 
     @Override
