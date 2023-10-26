@@ -8,4 +8,4 @@ The official JeriCraft plugin Repository
 - [x] [JeriCraft-Perks-GUI]
 - [x] [BigBrother]
 - [x] [Magnet]
-- [ ] [Night Vision]
+- [x] [Night Vision]
