@@ -13,7 +13,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class TacticalInsertion extends JavaPlugin implements SlimefunAddon {
+public class ExtraWeapons extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {

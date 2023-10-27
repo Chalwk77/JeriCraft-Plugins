@@ -6,18 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JeriCraftPerkGUI" />
         <module name="NightVision" />
+        <module name="Perks" />
+        <module name="Magnet" />
         <module name="HealMe" />
         <module name="TacticalInsertion" />
-        <module name="Magnet" />
+        <module name="ExtraWeapons" />
         <module name="BigBrother" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Feed" target="1.8" />
+      <module name="JeriCraftPerkGUI" target="1.8" />
       <module name="magnet" target="1.8" />
       <module name="TacInsert" target="1.8" />
+      <module name="TacticalInsertion" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

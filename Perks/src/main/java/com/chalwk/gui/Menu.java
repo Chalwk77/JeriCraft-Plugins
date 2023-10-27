@@ -1,8 +1,8 @@
 /* Copyright (c) 2023, JeriCraft-Perks-GUI. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.gui;
 
-import com.chalwk.JeriCraftPerkGUI;
 import com.chalwk.Misc;
+import com.chalwk.Perks;
 import com.chalwk.data.PlayerDataManager;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class Menu {
 
-    private static final FileConfiguration config = JeriCraftPerkGUI.getPluginConfig();
+    private static final FileConfiguration config = Perks.getPluginConfig();
 
     public static void showMenu(Player player, String title, int rows, boolean mainMenu) {
 

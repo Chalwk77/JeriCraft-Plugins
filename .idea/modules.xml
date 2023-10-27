@@ -3,11 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BigBrother/BigBrother.iml" filepath="$PROJECT_DIR$/BigBrother/BigBrother.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExtraWeapons/ExtraWeapons.iml" filepath="$PROJECT_DIR$/ExtraWeapons/ExtraWeapons.iml" />
       <module fileurl="file://$PROJECT_DIR$/HealMe/HealMe.iml" filepath="$PROJECT_DIR$/HealMe/HealMe.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JeriCraft-Plugins.iml" filepath="$PROJECT_DIR$/.idea/JeriCraft-Plugins.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JeriCraft-Perks-GUI/JeriCraftPerkGUI.iml" filepath="$PROJECT_DIR$/JeriCraft-Perks-GUI/JeriCraftPerkGUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/Magnet/Magnet.iml" filepath="$PROJECT_DIR$/Magnet/Magnet.iml" />
       <module fileurl="file://$PROJECT_DIR$/NightVision/NightVision.iml" filepath="$PROJECT_DIR$/NightVision/NightVision.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Perks/Perks.iml" filepath="$PROJECT_DIR$/Perks/Perks.iml" />
       <module fileurl="file://$PROJECT_DIR$/TacticalInsertion/TacticalInsertion.iml" filepath="$PROJECT_DIR$/TacticalInsertion/TacticalInsertion.iml" />
     </modules>
   </component>

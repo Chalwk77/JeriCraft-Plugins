@@ -1,12 +1,5 @@
-/BigBrother/target
-/JeriCraft-Perks-GUi/target
-/HealMe/target/
-/Magnet/target
-/NightVision/target
-
 /bin/
-/.settings/
-/target/
+**/target/
 /.idea/
 *.iml
 .project

@@ -5,7 +5,7 @@ import com.chalwk.commands.SubCommand;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
-import static com.chalwk.JeriCraftPerkGUI.getPluginConfig;
+import static com.chalwk.Perks.getPluginConfig;
 import static com.chalwk.gui.Menu.showMenu;
 
 public class ShowPerks extends SubCommand {

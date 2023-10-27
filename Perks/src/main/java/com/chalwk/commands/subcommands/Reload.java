@@ -4,8 +4,8 @@ package com.chalwk.commands.subcommands;
 import com.chalwk.commands.SubCommand;
 import org.bukkit.entity.Player;
 
-import static com.chalwk.JeriCraftPerkGUI.getInstance;
 import static com.chalwk.Misc.send;
+import static com.chalwk.Perks.getInstance;
 
 public class Reload extends SubCommand {
 

@@ -1,8 +1,8 @@
 /* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.gui;
 
-import com.chalwk.JeriCraftPerkGUI;
 import com.chalwk.Misc;
+import com.chalwk.Perks;
 import com.chalwk.data.PlayerDataManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -23,13 +23,13 @@ import static com.chalwk.gui.Menu.showMenu;
 
 public class CustomGUI {
 
-    private static final FileConfiguration config = JeriCraftPerkGUI.getPluginConfig();
+    private static final FileConfiguration config = Perks.getPluginConfig();
     private final List<GUIButton> buttons = new ArrayList<>();
     private Inventory inventory;
 
     public CustomGUI(String title, int rows) {
         if (rows > 6) {
-            JeriCraftPerkGUI.getInstance().getLogger().warning("Too many rows!");
+            Perks.getInstance().getLogger().warning("Too many rows!");
             return;
         }
         this.inventory = Bukkit.createInventory(null, rows * 9, title);

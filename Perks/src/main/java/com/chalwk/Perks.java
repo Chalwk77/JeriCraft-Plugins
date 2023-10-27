@@ -9,16 +9,16 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class JeriCraftPerkGUI extends JavaPlugin {
+public final class Perks extends JavaPlugin {
 
     public static FileConfiguration config;
-    static JeriCraftPerkGUI instance;
+    static Perks instance;
 
     public static FileConfiguration getPluginConfig() {
         return config;
     }
 
-    public static JeriCraftPerkGUI getInstance() {
+    public static Perks getInstance() {
         return instance;
     }
 
