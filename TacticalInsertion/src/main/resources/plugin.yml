@@ -1,0 +1,9 @@
+name: TacticalInsertion
+author: Chalwk
+description: This plugin adds a tactical insertion item to Slimefun.
+main: com.chalwk.TacticalInsertion
+website: https://github.com/Chalwk77/JeriCraft-Plugins/tree/main/TacticalInsertion
+version: ${project.version}
+api-version: 1.14
+depend:
+- Slimefun

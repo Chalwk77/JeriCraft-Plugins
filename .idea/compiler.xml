@@ -9,6 +9,7 @@
         <module name="JeriCraftPerkGUI" />
         <module name="NightVision" />
         <module name="HealMe" />
+        <module name="TacticalInsertion" />
         <module name="Magnet" />
         <module name="BigBrother" />
       </profile>
@@ -16,6 +17,7 @@
     <bytecodeTargetLevel>
       <module name="Feed" target="1.8" />
       <module name="magnet" target="1.8" />
+      <module name="TacInsert" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
