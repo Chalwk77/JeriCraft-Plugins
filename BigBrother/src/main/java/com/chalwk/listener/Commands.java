@@ -4,11 +4,9 @@ package com.chalwk.listener;
 import com.chalwk.BigBrother;
 import com.chalwk.data.PlayerDataManager;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.Nullable;
 
-import static com.chalwk.BigBrother.getPluginConfig;
 import static com.chalwk.Misc.*;
 import static com.chalwk.data.PlayerDataManager.getData;
 

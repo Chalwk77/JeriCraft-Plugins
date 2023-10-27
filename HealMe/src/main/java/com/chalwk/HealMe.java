@@ -7,7 +7,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -22,6 +21,7 @@ public final class HealMe extends JavaPlugin implements Listener {
     public static HealMe getInstance() {
         return instance;
     }
+
     public static FileConfiguration getPluginConfig() {
         return config;
     }
@@ -29,10 +29,10 @@ public final class HealMe extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
 
+        super.onEnable();
         instance = this;
-        this.saveDefaultConfig();
-        config = this.getConfig();
-        config.options().copyDefaults(true);
+
+        reloadConfig();
 
         commands.add("feed");
         commands.add("heal");
@@ -50,5 +50,15 @@ public final class HealMe extends JavaPlugin implements Listener {
     @Override
     public void onDisable() {
         Log("HealMe was disabled!");
+    }
+
+    @Override
+    public void reloadConfig() {
+        super.reloadConfig();
+
+        saveDefaultConfig();
+        config = getConfig();
+        config.options().copyDefaults(true);
+        saveConfig();
     }
 }
