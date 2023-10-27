@@ -14,7 +14,6 @@ import static com.chalwk.data.PlayerDataManager.getData;
 
 public class Commands {
 
-    private static final FileConfiguration config = getPluginConfig();
     private static final BigBrother instance = BigBrother.getInstance();
     private static final String toggleMessage = getString("toggle-message");
     private static final String toggleAllMessage = getString("toggle-all-message");
@@ -42,9 +41,7 @@ public class Commands {
                 switch (module) {
                     case "reload":
                         if (hasPerm(player, (getString("reload-permission")))) {
-                            config.options().copyDefaults(true);
                             instance.reloadConfig();
-                            instance.saveConfig();
                             send(player, formatMSG(getString("config-reload")));
                         } else {
                             send(player, formatMSG(getString("no-permission")));

@@ -15,11 +15,6 @@ public class Reload extends SubCommand {
     }
 
     @Override
-    public String getDescription() {
-        return "Reloads the plugin";
-    }
-
-    @Override
     public String getSyntax() {
         return "&cInvalid Syntax. Usage: &b/perks reload";
     }

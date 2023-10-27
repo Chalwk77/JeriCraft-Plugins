@@ -40,9 +40,7 @@ public class Commands {
                 String module = args[0].toLowerCase();
                 if (module.equals("reload")) {
                     if (hasPerm(player, (getString("nightvision.reload")))) {
-                        config.options().copyDefaults(true);
                         instance.reloadConfig();
-                        instance.saveConfig();
                         send(player, formatMSG(getString("config-reload")));
                     } else {
                         send(player, formatMSG(getString("no-permission")));

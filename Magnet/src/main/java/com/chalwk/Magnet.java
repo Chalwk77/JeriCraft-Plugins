@@ -33,10 +33,9 @@ public final class Magnet extends JavaPlugin implements Listener {
 
         instance = this;
 
-        saveDefaultConfig();
-        config = getConfig();
+        this.saveDefaultConfig();
+        config = this.getConfig();
         config.options().copyDefaults(true);
-        saveConfig();
 
         Bukkit.getPluginManager().registerEvents(this, this);
         Log("Magnet is enabled!");

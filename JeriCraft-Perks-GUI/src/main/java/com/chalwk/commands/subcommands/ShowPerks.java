@@ -18,11 +18,6 @@ public class ShowPerks extends SubCommand {
     }
 
     @Override
-    public String getDescription() {
-        return "Shows you the perks you have purchased.";
-    }
-
-    @Override
     public String getSyntax() {
         return "/perks " + getName();
     }

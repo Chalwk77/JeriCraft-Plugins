@@ -36,10 +36,9 @@ public final class BigBrother extends JavaPlugin implements Listener {
     public void onEnable() {
         instance = this;
 
-        saveDefaultConfig();
-        config = getConfig();
+        this.saveDefaultConfig();
+        config = this.getConfig();
         config.options().copyDefaults(true);
-        saveConfig();
 
         registerListeners();
         Log(config.getString("on-enable"));

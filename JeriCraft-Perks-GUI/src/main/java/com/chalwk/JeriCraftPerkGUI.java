@@ -25,24 +25,17 @@ public final class JeriCraftPerkGUI extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        super.onEnable();
         instance = this;
 
-        reloadConfig();
-        registerListeners();
+        this.saveDefaultConfig();
+        this.saveDefaultConfig();
+        config = this.getConfig();
+        config.options().copyDefaults(true);
 
+        registerListeners();
         String pluginVersion = getDescription().getVersion();
         getLogger().info("JeriCraftPerks [" + pluginVersion + "] has been loaded!");
         getCommand("perks").setExecutor(new CommandManager());
-    }
-
-    @Override
-    public void reloadConfig() {
-        super.reloadConfig();
-        saveDefaultConfig();
-        config = getConfig();
-        config.options().copyDefaults(true);
-        saveConfig();
     }
 
     private void registerListeners() {

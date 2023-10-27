@@ -32,11 +32,9 @@ public final class NightVision extends JavaPlugin implements Listener {
     public void onEnable() {
 
         instance = this;
-
-        saveDefaultConfig();
-        config = getConfig();
+        this.saveDefaultConfig();
+        config = this.getConfig();
         config.options().copyDefaults(true);
-        saveConfig();
 
         Bukkit.getPluginManager().registerEvents(new JoinListener(), this);
         Bukkit.getPluginManager().registerEvents(this, this);

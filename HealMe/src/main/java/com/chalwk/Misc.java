@@ -2,11 +2,14 @@
 package com.chalwk;
 
 import org.bukkit.ChatColor;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 import static org.bukkit.Bukkit.getLogger;
 
 public class Misc {
+
+    private static final FileConfiguration config = HealMe.getPluginConfig();
 
     public static void send(Player sender, String msg) {
         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', msg));
@@ -17,6 +20,6 @@ public class Misc {
     }
 
     public static String getString(String s) {
-        return HealMe.config.getString(s);
+        return config.getString(s);
     }
 }

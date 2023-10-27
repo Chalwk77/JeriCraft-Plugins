@@ -22,6 +22,7 @@ import static com.chalwk.Misc.getString;
 import static com.chalwk.Misc.send;
 
 public class Commands implements CommandExecutor, Listener, TabCompleter {
+    HealMe instance = getInstance();
 
     public static boolean hasPerm(Player player, String node) {
         if (player.hasPermission(node)) {
@@ -64,7 +65,7 @@ public class Commands implements CommandExecutor, Listener, TabCompleter {
             send(player, getString("feed-message"));
             Effect(player);
         } else if (cmd.equalsIgnoreCase("healme_reload") && hasPerm(player, "healme.reload")) {
-            getInstance().reloadConfig();
+            instance.reloadConfig();
             send(player, getString("config-reload"));
         }
 
