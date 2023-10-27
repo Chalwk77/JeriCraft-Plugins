@@ -1,8 +1,8 @@
-name: TacticalInsertion
+name: ExtraWeapons
 author: Chalwk
-description: This plugin adds a tactical insertion item to Slimefun.
-main: com.chalwk.TacticalInsertion
-website: https://github.com/Chalwk77/JeriCraft-Plugins/tree/main/TacticalInsertion
+description: Adds new weapons to the Slimefun4 plugin.
+main: com.chalwk.ExtraWeapons
+website: https://github.com/Chalwk77/JeriCraft-Plugins/tree/main/ExtraWeapons
 version: ${project.version}
 api-version: 1.14
 depend:
