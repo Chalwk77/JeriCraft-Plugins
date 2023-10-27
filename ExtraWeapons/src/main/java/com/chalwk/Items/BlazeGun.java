@@ -17,12 +17,12 @@ public class BlazeGun extends SlimefunItem {
 
     @Override
     public void preRegister() {
-        ItemUseHandler itemUseHandler = this::onRightClick;
+        ItemUseHandler itemUseHandler = this::onItemUseRightClick;
         addItemHandler(itemUseHandler);
     }
 
-    private void onRightClick(PlayerRightClickEvent event) {
-        event.cancel();
-        event.getPlayer().sendMessage("You right clicked the Blaze Gun!");
+    private void onItemUseRightClick(PlayerRightClickEvent event) {
+        event.getPlayer().giveExpLevels(1);
+        event.getPlayer().sendMessage("You have been given 1 level of experience");
     }
 }
