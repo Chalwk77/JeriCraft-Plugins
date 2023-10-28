@@ -6,7 +6,7 @@ The official JeriCraft plugin Repository
 
 # Plugin List:
 - [x] [BigBrother]
-- [ ] ExtraWeapons (slimefun4 addon)
+- [ ] ExtraWeapons (Slimefun4 addon WIP)
 - [x] [Healme]
 - [x] [Magnet]
 - [x] [Night Vision]
