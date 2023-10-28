@@ -6,4 +6,4 @@ website: https://github.com/Chalwk77/JeriCraft-Plugins/tree/main/ExtraWeapons
 version: ${project.version}
 api-version: 1.14
 depend:
-- Slimefun
+  - Slimefun
