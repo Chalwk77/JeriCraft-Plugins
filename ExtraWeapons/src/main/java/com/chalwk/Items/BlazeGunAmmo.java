@@ -12,9 +12,4 @@ public class BlazeGunAmmo extends SlimefunItem {
     public BlazeGunAmmo(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
     }
-
-    @Override
-    public void preRegister() {
-
-    }
 }

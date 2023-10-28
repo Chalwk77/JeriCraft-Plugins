@@ -28,5 +28,6 @@ public class ZapperGun extends SlimefunItem {
         Player player = event.getPlayer();
         Inventory inv = player.getInventory();
 
+        player.getWorld().strikeLightning(player.getTargetBlock(null, 100).getLocation());
     }
 }

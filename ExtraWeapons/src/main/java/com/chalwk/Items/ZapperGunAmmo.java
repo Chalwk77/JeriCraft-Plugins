@@ -12,9 +12,4 @@ public class ZapperGunAmmo extends SlimefunItem {
     public ZapperGunAmmo(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
     }
-
-    @Override
-    public void preRegister() {
-
-    }
 }
