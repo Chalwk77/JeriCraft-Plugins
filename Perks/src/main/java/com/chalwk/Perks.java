@@ -1,4 +1,4 @@
-/* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
+/* Copyright (c) 2023, Perks. Jericho Crosby <jericho.crosby227@gmail.com> */
 
 package com.chalwk;
 
@@ -26,15 +26,13 @@ public final class Perks extends JavaPlugin {
     public void onEnable() {
 
         instance = this;
-
-        this.saveDefaultConfig();
         this.saveDefaultConfig();
         config = this.getConfig();
         config.options().copyDefaults(true);
 
         registerListeners();
         String pluginVersion = getDescription().getVersion();
-        getLogger().info("JeriCraftPerks [" + pluginVersion + "] has been loaded!");
+        getLogger().info("Perks [" + pluginVersion + "] has been loaded!");
         getCommand("perks").setExecutor(new CommandManager());
     }
 
@@ -45,6 +43,6 @@ public final class Perks extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        getLogger().info("JeriCraftPerks has been unloaded!");
+        getLogger().info("Perks has been unloaded!");
     }
 }

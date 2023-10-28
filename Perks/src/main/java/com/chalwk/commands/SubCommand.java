@@ -1,4 +1,4 @@
-/* Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com> */
+/* Copyright (c) 2023, Perks. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.commands;
 
 import org.bukkit.entity.Player;
