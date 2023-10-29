@@ -8,6 +8,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import org.bukkit.Location;
+import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Player;
@@ -38,8 +39,9 @@ public class BlazeGun extends SlimefunItem {
 
         if (inv.containsAtLeast(BLAZE_GUN_AMMO, 1)) {
             inv.removeItem(BLAZE_GUN_AMMO);
-            player.launchProjectile(Fireball.class);
             player.playSound(location, Sound.ENTITY_BLAZE_SHOOT, 1, 1);
+            player.spawnParticle(Particle.FLAME, location, 1);
+            player.launchProjectile(Fireball.class).setIsIncendiary(true);
         } else {
             player.playSound(location, Sound.ENTITY_BLAZE_HURT, 1, 1);
             send(player, "&cYou need &b" + itemName + " &cto shoot!");

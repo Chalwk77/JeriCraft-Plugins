@@ -7,6 +7,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
+import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -37,6 +38,7 @@ public class ZapperGun extends SlimefunItem {
             inv.removeItem(ZAPPER_GUN_AMMO);
             player.getWorld().strikeLightning(player.getTargetBlock(null, 100).getLocation());
             player.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1, 1);
+            player.spawnParticle(Particle.FIREWORKS_SPARK, player.getLocation(), 1);
         } else {
             player.playSound(player.getLocation(), Sound.ENTITY_BLAZE_HURT, 1, 1);
             send(player, "&cYou need &b" + itemName + " &cto shoot!");
