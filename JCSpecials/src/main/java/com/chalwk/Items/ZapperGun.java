@@ -54,7 +54,6 @@ public class ZapperGun extends SlimefunItem {
 
         Player player = event.getPlayer();
         Inventory inv = player.getInventory();
-        String itemName = ZAPPER_GUN_AMMO.getItemMeta().getDisplayName();
 
         if (inv.containsAtLeast(ZAPPER_GUN_AMMO, 1)) {
             inv.removeItem(ZAPPER_GUN_AMMO);
@@ -71,6 +70,7 @@ public class ZapperGun extends SlimefunItem {
             player.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1, 1);
             player.spawnParticle(Particle.FIREWORKS_SPARK, player.getLocation(), 1);
         } else {
+            String itemName = ZAPPER_GUN_AMMO.getItemMeta().getDisplayName();
             player.playSound(player.getLocation(), Sound.ENTITY_BLAZE_HURT, 1, 1);
             send(player, "&cYou need &b" + itemName + " &cto shoot!");
         }

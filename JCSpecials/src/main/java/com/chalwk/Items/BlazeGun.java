@@ -45,7 +45,6 @@ public class BlazeGun extends SlimefunItem {
         Player player = event.getPlayer();
         Location location = player.getLocation();
         Inventory inv = player.getInventory();
-        String itemName = BLAZE_GUN_AMMO.getItemMeta().getDisplayName();
 
         if (inv.containsAtLeast(BLAZE_GUN_AMMO, 1)) {
             inv.removeItem(BLAZE_GUN_AMMO);
@@ -53,6 +52,7 @@ public class BlazeGun extends SlimefunItem {
             player.spawnParticle(Particle.FLAME, location, 1);
             player.launchProjectile(Fireball.class).setIsIncendiary(true);
         } else {
+            String itemName = BLAZE_GUN_AMMO.getItemMeta().getDisplayName();
             player.playSound(location, Sound.ENTITY_BLAZE_HURT, 1, 1);
             send(player, "&cYou need &b" + itemName + " &cto shoot!");
         }
