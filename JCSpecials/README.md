@@ -4,31 +4,48 @@ Introducing **JCSpecials**, a custom Slimefun addon.
 
 New items:
 
-```none
-1).  Blaze Gun (Shoots burning magma cream)
-1.1) Blaze Gun Ammo (Used with Blaze Gun)
-     
-Gun recipe (enhanced crafting table):
-        [   ] [   ] [FR]         FR  = Fire Rune
-        [   ] [ S ] [  ]         S   = Stick
-        [RAI] [   ] [  ]         RAI = Reinforced Alloy Ingot         
+- Blaze Gun (shoots burning magma cream)
+- Blaze Gun Ammo (Used with Blaze Gun)
+- Zapper Gun (Strikes lightning on your enemies)
+- Zapper Gun Ammo (Used with Zapper Gun)
+- Smelters Shovel (Smelts sand into glass)
 
-1.2) Blaze Gun Ammo recipe (enhanced crafting table):
-        [  ] [BP] [  ]          MC = Magma Cream
-        [BP] [MC] [BP]          BP = Blaze Powder
-        [  ] [BP] [  ]
+#### Blaze Gun recipe (enhanced crafting table):
 
+```
+[   ] [   ] [FR]         FR  = Fire Rune
+[   ] [ S ] [  ]         S   = Stick
+[RAI] [   ] [  ]         RAI = Reinforced Alloy Ingot     
+```
 
-2).  Zapper Gun (Strikes lightning on your enemies)
-2.1) Zapper Gun Ammo (Used with Zapper Gun)
+#### Blaze Gun Ammo recipe (enhanced crafting table):
 
-     Gun recipe (enhanced crafting table):
-        [   ] [  ] [LRU]         LR  = Lightning Rune
-        [   ] [LR] [   ]         LR  = Lightning Rod
-        [RAI] [  ] [   ]         RAI = Redstone Alloy Ingot
+```
+[  ] [BP] [  ]           BP = Blaze Powder
+[BP] [MC] [BP]           MC = Magma Cream
+[  ] [BP] [  ]           
+```
 
-2.2) Zapper Gun Ammo recipe (enhanced crafting table):
-        [NS] [NS] [NS]         NS = Nether Star
-        [NS] [NS] [NS]         LR = Blaze Rod
-        [NS] [NS] [NS]
+#### Zapper Gun recipe (enhanced crafting table):
+
+```
+[   ] [  ] [LRU]         LRU = Lightning Rune
+[   ] [LR] [   ]         LR  = Lightning Rod
+[RAI] [  ] [   ]         RAI = Redstone Alloy Ingot
+```
+
+#### Zapper Gun Ammo recipe (enhanced crafting table):
+
+```
+[NS] [NS] [NS]           NS = Nether Star
+[NS] [NS] [NS]
+[NS] [NS] [NS]
+```
+
+#### Smelters Shovel recipe (enhanced crafting table):
+
+```
+[   ] [LC ] [  ]           LC  = Lava Crystal
+[   ] [RAI] [  ]           RAI = Redstone Alloy Ingot
+[   ] [RAI] [  ]
 ```

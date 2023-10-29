@@ -24,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 import java.util.UUID;
 
-import static com.chalwk.util.Items.BLAZE_GUN;
+import static com.chalwk.util.Items.SMELTERS_SHOVEL;
 
 public class SmeltersShovel extends SimpleSlimefunItem<ItemInteractHandler> {
 
@@ -98,8 +98,8 @@ public class SmeltersShovel extends SimpleSlimefunItem<ItemInteractHandler> {
         if (lastUse != null) {
             uses.put(uuid, lastUse + 1);
             if (uses.get(uuid) >= maxUses) {
-                p.getInventory().removeItem(BLAZE_GUN);
-                p.sendMessage(Messages.BLAZE_GUN_BROKE.getMessage());
+                p.getInventory().removeItem(SMELTERS_SHOVEL);
+                p.sendMessage(Messages.SMELTERS_SHOVEL_BROKE.getMessage());
                 p.playSound(location, Sound.ENTITY_ITEM_BREAK, 1, 1);
                 return true;
             }
