@@ -7,3 +7,14 @@ version: ${project.version}
 api-version: 1.14
 depend:
   - Slimefun
+
+commands:
+  jcspecials_reload:
+    description: Reloads the plugin
+    permission: jcspecials.reload
+    usage: /<command>
+
+permissions:
+  jcspecials.reload:
+    description: Allows the player to reload the plugin
+    default: op

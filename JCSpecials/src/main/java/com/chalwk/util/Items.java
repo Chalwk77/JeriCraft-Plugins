@@ -1,12 +1,12 @@
 /* Copyright (c) 2023, JCSpecials. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.util;
 
-import com.chalwk.JCSpecials;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import org.bukkit.Material;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.inventory.ItemStack;
+
+import static com.chalwk.JCSpecials.cfg;
 
 public class Items {
 
@@ -41,8 +41,6 @@ public class Items {
             new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH),
             new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH)
     };
-
-    private static final FileConfiguration cfg = JCSpecials.getInstance().getConfig();
 
     /* ITEMS STACKS: */
     public static SlimefunItemStack BLAZE_GUN = new SlimefunItemStack(

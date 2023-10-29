@@ -10,7 +10,6 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ToolUseHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.items.SimpleSlimefunItem;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
 import org.bukkit.Effect;
 import org.bukkit.Location;
@@ -24,20 +23,18 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 import java.util.UUID;
 
+import static com.chalwk.JCSpecials.cfg;
 import static com.chalwk.util.Items.SMELTERS_SHOVEL;
 
 public class SmeltersShovel extends SimpleSlimefunItem<ItemInteractHandler> {
 
-    private static final JCSpecials instance = JCSpecials.getInstance();
     private final HashMap<UUID, Long> uses = new HashMap<>();
     private final int maxUses;
 
-    public SmeltersShovel(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+    public SmeltersShovel(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
 
         super(itemGroup, item, recipeType, recipe);
-        this.register(instance);
-
-        Config cfg = new Config(instance);
+        this.register(plugin);
         maxUses = cfg.getInt("item-settings.smelters-shovel.uses");
     }
 

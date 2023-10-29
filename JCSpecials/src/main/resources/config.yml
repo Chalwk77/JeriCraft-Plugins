@@ -1,16 +1,16 @@
 options:
   auto-update: true
   debug: false
-
 item-settings:
   smelters-shovel:
-    uses: 128
+    uses: 500
   blaze-gun:
-    uses: 15
+    uses: 228
   zapper-gun:
-    uses: 25
-
+    uses: 228
 messages:
+  plugin-reload: "&aJCSpecials reloaded!"
+  no-permission: "&cYou do not have permission to use this command!"
   items:
     blaze-gun:
       name: "&6Blaze Gun"

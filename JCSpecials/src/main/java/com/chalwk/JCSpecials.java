@@ -4,6 +4,7 @@ package com.chalwk;
 
 import com.chalwk.Items.*;
 import com.chalwk.Listeners.PlayerListener;
+import com.chalwk.Listeners.ReloadCommand;
 import com.chalwk.util.Items;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -22,6 +23,7 @@ import static com.chalwk.util.Items.*;
 
 public class JCSpecials extends JavaPlugin implements SlimefunAddon {
 
+    public static Config cfg;
     private static JCSpecials instance;
     private ItemGroup parentCategory;
     private boolean debug = true;
@@ -33,7 +35,7 @@ public class JCSpecials extends JavaPlugin implements SlimefunAddon {
     @Override
     public void onEnable() {
 
-        Config cfg = new Config(this);
+        cfg = new Config(this);
         debug = cfg.getBoolean("options.debug");
         instance = this;
 
@@ -41,6 +43,7 @@ public class JCSpecials extends JavaPlugin implements SlimefunAddon {
             getLogger().info("Enabling...");
         }
         new PlayerListener(this);
+        new ReloadCommand(this);
 
         setupCategories();
         setupItems();
@@ -70,12 +73,12 @@ public class JCSpecials extends JavaPlugin implements SlimefunAddon {
             getLogger().info("Setting up items...");
         }
 
-        new BlazeGun(parentCategory, Items.BLAZE_GUN, RecipeType.ENHANCED_CRAFTING_TABLE, blazeGunRecipe);
-        new BlazeGunAmmo(parentCategory, Items.BLAZE_GUN_AMMO, RecipeType.ENHANCED_CRAFTING_TABLE, blazeGunAmmoRecipe);
-        new ZapperGun(parentCategory, Items.ZAPPER_GUN, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunRecipe);
-        new ZapperGunAmmo(parentCategory, Items.ZAPPER_GUN_AMMO, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunAmmoRecipe);
-        new SmeltersShovel(parentCategory, Items.SMELTERS_SHOVEL, RecipeType.ENHANCED_CRAFTING_TABLE, smeltersShovelRecipe);
-        new Sponge(parentCategory, Items.SPONGE, RecipeType.ENHANCED_CRAFTING_TABLE, spongeRecipe);
+        new BlazeGun(parentCategory, Items.BLAZE_GUN, RecipeType.ENHANCED_CRAFTING_TABLE, blazeGunRecipe, this);
+        new BlazeGunAmmo(parentCategory, Items.BLAZE_GUN_AMMO, RecipeType.ENHANCED_CRAFTING_TABLE, blazeGunAmmoRecipe, this);
+        new ZapperGun(parentCategory, Items.ZAPPER_GUN, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunRecipe, this);
+        new ZapperGunAmmo(parentCategory, Items.ZAPPER_GUN_AMMO, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunAmmoRecipe, this);
+        new SmeltersShovel(parentCategory, Items.SMELTERS_SHOVEL, RecipeType.ENHANCED_CRAFTING_TABLE, smeltersShovelRecipe, this);
+        new Sponge(parentCategory, Items.SPONGE, RecipeType.ENHANCED_CRAFTING_TABLE, spongeRecipe, this);
 
         registerResearch("blaze_gun", 7500, "Blaze Gun", 20, Items.BLAZE_GUN);
         registerResearch("blaze_gun_ammo", 7501, "Blaze Gun Ammo", 10, Items.BLAZE_GUN_AMMO);

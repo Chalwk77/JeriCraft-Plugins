@@ -10,10 +10,9 @@ import org.bukkit.inventory.ItemStack;
 
 public class Sponge extends SlimefunItem {
 
-    private static final JCSpecials instance = JCSpecials.getInstance();
 
-    public Sponge(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+    public Sponge(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
-        this.register(instance);
+        this.register(plugin);
     }
 }

@@ -10,7 +10,6 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockPlaceHandler;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -26,20 +25,18 @@ import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
+import static com.chalwk.JCSpecials.cfg;
 import static com.chalwk.util.Items.ZAPPER_GUN;
 import static com.chalwk.util.Items.ZAPPER_GUN_AMMO;
 
 public class ZapperGun extends SlimefunItem {
 
-    private static final JCSpecials instance = JCSpecials.getInstance();
     private final HashMap<UUID, Long> uses = new HashMap<>();
     private final int maxUses;
 
-    public ZapperGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+    public ZapperGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
-        this.register(instance);
-
-        Config cfg = new Config(instance);
+        this.register(plugin);
         maxUses = cfg.getInt("item-settings.zapper-gun.uses");
     }
 

@@ -12,8 +12,8 @@ public class ZapperGunAmmo extends SlimefunItem {
 
     private static final JCSpecials instance = JCSpecials.getInstance();
 
-    public ZapperGunAmmo(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+    public ZapperGunAmmo(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
-        this.register(instance);
+        this.register(plugin);
     }
 }

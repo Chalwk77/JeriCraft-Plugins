@@ -12,6 +12,7 @@ New items:
 - Craftable Sponge (Sucks up water)
 
 #### Blaze Gun recipe (enhanced crafting table):
+
 ```
 [   ] [   ] [FR]         FR  = Fire Rune
 [   ] [ S ] [  ]         S   = Stick
@@ -19,6 +20,7 @@ New items:
 ```
 
 #### Blaze Gun Ammo recipe (enhanced crafting table):
+
 ```
 [  ] [BP] [  ]           BP = Blaze Powder
 [BP] [MC] [BP]           MC = Magma Cream
@@ -26,6 +28,7 @@ New items:
 ```
 
 #### Zapper Gun recipe (enhanced crafting table):
+
 ```
 [   ] [  ] [LRU]         LRU = Lightning Rune
 [   ] [LR] [   ]         LR  = Lightning Rod
@@ -33,6 +36,7 @@ New items:
 ```
 
 #### Zapper Gun Ammo recipe (enhanced crafting table):
+
 ```
 [NS] [NS] [NS]           NS = Nether Star
 [NS] [NS] [NS]
@@ -40,6 +44,7 @@ New items:
 ```
 
 #### Smelters Shovel recipe (enhanced crafting table):
+
 ```
 [   ] [LC ] [  ]           LC  = Lava Crystal
 [   ] [RAI] [  ]           RAI = Redstone Alloy Ingot

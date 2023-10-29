@@ -10,10 +10,8 @@ import org.bukkit.inventory.ItemStack;
 
 public class BlazeGunAmmo extends SlimefunItem {
 
-    private static final JCSpecials instance = JCSpecials.getInstance();
-
-    public BlazeGunAmmo(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
+    public BlazeGunAmmo(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
-        this.register(instance);
+        this.register(plugin);
     }
 }
