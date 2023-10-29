@@ -1,3 +1,13 @@
 options:
   auto-update: true
   debug: false
+item-settings:
+  smelters-shovel:
+    cooldown: 500
+
+messages:
+  items:
+    smelters-shovel:
+      block-break: "&cYou cannot smelt this block!"
+      cooldown: "&cYou cannot do that now. You need to wait &e{time} &cmore milliseconds!"
+      damageable: true

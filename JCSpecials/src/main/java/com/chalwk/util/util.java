@@ -1,4 +1,4 @@
-/* Copyright (c) 2023, JeriCraft-Plugins. Jericho Crosby <jericho.crosby227@gmail.com> */
+/* Copyright (c) 2023, JCSpecials. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.util;
 
 import org.bukkit.ChatColor;

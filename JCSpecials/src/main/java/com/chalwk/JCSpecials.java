@@ -2,6 +2,7 @@
 
 package com.chalwk;
 
+import com.chalwk.Listeners.PlayerListener;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
@@ -33,6 +34,7 @@ public class JCSpecials extends JavaPlugin implements SlimefunAddon {
         if (debug) {
             getLogger().info("Enabling...");
         }
+        new PlayerListener(this);
 
         setupCategories();
         setupItems();
@@ -66,6 +68,7 @@ public class JCSpecials extends JavaPlugin implements SlimefunAddon {
         getBlazeGunAmmo(parentCategory);
         getZapperGun(parentCategory);
         getZapperGunAmmo(parentCategory);
+        getSmeltersShovel(parentCategory);
     }
 
     @Override

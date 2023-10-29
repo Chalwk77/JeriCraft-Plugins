@@ -1,17 +1,13 @@
-/* Copyright (c) 2023, JeriCraft-Plugins. Jericho Crosby <jericho.crosby227@gmail.com> */
+/* Copyright (c) 2023, JCSpecials. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.util;
 
-import com.chalwk.Items.BlazeGun;
-import com.chalwk.Items.BlazeGunAmmo;
-import com.chalwk.Items.ZapperGun;
-import com.chalwk.Items.ZapperGunAmmo;
+import com.chalwk.Items.*;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
-import org.jetbrains.annotations.NotNull;
 
 public class Recipes {
 
@@ -35,32 +31,40 @@ public class Recipes {
             new ItemStack(Material.NETHER_STAR), new ItemStack(Material.NETHER_STAR), new ItemStack(Material.NETHER_STAR),
             new ItemStack(Material.NETHER_STAR), new ItemStack(Material.NETHER_STAR), new ItemStack(Material.NETHER_STAR)
     };
+
+    private static final ItemStack[] smeltersShovelRecipe = {
+            null, SlimefunItems.LAVA_CRYSTAL, null,
+            null, SlimefunItems.REINFORCED_ALLOY_INGOT, null,
+            null, SlimefunItems.REINFORCED_ALLOY_INGOT, null
+    };
+
     public static ItemStack BLAZE_GUN_AMMO;
     public static ItemStack ZAPPER_GUN_AMMO;
 
-    @NotNull
-    public static BlazeGun getBlazeGun(ItemGroup itemGroup) {
+    public static void getBlazeGun(ItemGroup itemGroup) {
         SlimefunItemStack blazeGun = new SlimefunItemStack("BLAZE_GUN", Material.BLAZE_ROD, "&6Blaze Gun", "&bShoots burning magma cream");
-        return new BlazeGun(itemGroup, blazeGun, RecipeType.ENHANCED_CRAFTING_TABLE, blazeGunRecipe);
+        new BlazeGun(itemGroup, blazeGun, RecipeType.ENHANCED_CRAFTING_TABLE, blazeGunRecipe);
     }
 
-    @NotNull
-    public static BlazeGunAmmo getBlazeGunAmmo(ItemGroup itemGroup) {
+    public static void getBlazeGunAmmo(ItemGroup itemGroup) {
         SlimefunItemStack blazeGunAmmo = new SlimefunItemStack("BLAZE_GUN_AMMO", Material.MAGMA_CREAM, "&6Blaze Gun Ammo", "&bUsed with Blaze Gun");
         BLAZE_GUN_AMMO = blazeGunAmmo;
-        return new BlazeGunAmmo(itemGroup, blazeGunAmmo, RecipeType.ENHANCED_CRAFTING_TABLE, blazeGunAmmoRecipe);
+        new BlazeGunAmmo(itemGroup, blazeGunAmmo, RecipeType.ENHANCED_CRAFTING_TABLE, blazeGunAmmoRecipe);
     }
 
-    @NotNull
-    public static ZapperGun getZapperGun(ItemGroup itemGroup) {
+    public static void getZapperGun(ItemGroup itemGroup) {
         SlimefunItemStack zapperGun = new SlimefunItemStack("ZAPPER_GUN", Material.LIGHTNING_ROD, "&6Zapper Gun", "&bStrikes lightning on your enemies");
-        return new ZapperGun(itemGroup, zapperGun, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunRecipe);
+        new ZapperGun(itemGroup, zapperGun, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunRecipe);
     }
 
-    @NotNull
-    public static ZapperGunAmmo getZapperGunAmmo(ItemGroup itemGroup) {
+    public static void getZapperGunAmmo(ItemGroup itemGroup) {
         SlimefunItemStack zapperGunAmmo = new SlimefunItemStack("ZAPPER_GUN_AMMO", Material.NETHER_STAR, "&6Zapper Gun Ammo", "&bUsed with Zapper Gun");
         ZAPPER_GUN_AMMO = zapperGunAmmo;
-        return new ZapperGunAmmo(itemGroup, zapperGunAmmo, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunAmmoRecipe);
+        new ZapperGunAmmo(itemGroup, zapperGunAmmo, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunAmmoRecipe);
+    }
+
+    public static void getSmeltersShovel(ItemGroup itemGroup) {
+        SlimefunItemStack smeltersShovel = new SlimefunItemStack("SMELTERS_SHOVEL", Material.NETHERITE_SHOVEL, "&6Smelters Shovel", "&bSmelts sand into glass");
+        new SmeltersShovel(itemGroup, smeltersShovel, RecipeType.ENHANCED_CRAFTING_TABLE, smeltersShovelRecipe);
     }
 }
