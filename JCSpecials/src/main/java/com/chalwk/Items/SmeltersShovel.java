@@ -54,6 +54,7 @@ public class SmeltersShovel extends SimpleSlimefunItem<ItemInteractHandler> {
                 return;
             }
 
+            e.setCancelled(true);
             Block b = e.getClickedBlock();
             if (b != null) {
                 Player p = e.getPlayer();
@@ -101,6 +102,7 @@ public class SmeltersShovel extends SimpleSlimefunItem<ItemInteractHandler> {
                 p.getInventory().removeItem(SMELTERS_SHOVEL);
                 p.sendMessage(Messages.SMELTERS_SHOVEL_BROKE.getMessage());
                 p.playSound(location, Sound.ENTITY_ITEM_BREAK, 1, 1);
+                uses.put(uuid, 0L);
                 return true;
             }
         } else {
