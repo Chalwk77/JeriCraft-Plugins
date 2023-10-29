@@ -57,6 +57,9 @@ public class BlazeGun extends SlimefunItem {
             p.playSound(location, Sound.ENTITY_BLAZE_SHOOT, 1, 1);
             p.spawnParticle(Particle.FLAME, location, 1);
             p.launchProjectile(Fireball.class).setVelocity(location.getDirection().multiply(2));
+            p.sendActionBar(Messages.BLAZE_GUN_BOSS_BAR.getMessage()
+                    .replace("{uses}", String.valueOf(uses.get(p.getUniqueId())))
+                    .replace("{max_uses}", String.valueOf(maxUses)));
         } else if (!breakItem(p, location)) {
             String itemName = BLAZE_GUN_AMMO.getItemMeta().getDisplayName();
             p.playSound(location, Sound.ENTITY_BLAZE_HURT, 1, 1);

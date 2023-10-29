@@ -79,6 +79,9 @@ public class ZapperGun extends SlimefunItem {
 
             p.playSound(p.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1, 1);
             p.spawnParticle(Particle.FIREWORKS_SPARK, p.getLocation(), 1);
+            p.sendActionBar(Messages.ZAPPER_GUN_BOSS_BAR.getMessage()
+                    .replace("{uses}", String.valueOf(uses.get(p.getUniqueId())))
+                    .replace("{max_uses}", String.valueOf(maxUses)));
 
         } else if (!breakItem(p, location)) {
             String itemName = ZAPPER_GUN_AMMO.getItemMeta().getDisplayName();

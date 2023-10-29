@@ -68,6 +68,9 @@ public class SmeltersShovel extends SimpleSlimefunItem<ItemInteractHandler> {
                                 b.getWorld().dropItemNaturally(b.getLocation(), new ItemStack(b.getType() == Material.SAND ? Material.GLASS : Material.RED_STAINED_GLASS, 1));
                                 b.getWorld().playEffect(b.getLocation(), Effect.MOBSPAWNER_FLAMES, 1);
                                 b.setType(Material.AIR);
+                                p.sendActionBar(Messages.SMELTERS_SHOVEL_BOSS_BAR.getMessage()
+                                        .replace("{uses}", String.valueOf(uses.get(p.getUniqueId())))
+                                        .replace("{max_uses}", String.valueOf(maxUses)));
                             }
                             break;
                         case LEFT_CLICK_BLOCK:

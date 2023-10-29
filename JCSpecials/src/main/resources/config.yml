@@ -17,6 +17,7 @@ messages:
       description: "&bShoots burning magma cream!"
       no-ammo: "&cYou need &b{item_name} &cto shoot!"
       broke: "&cTool broke!"
+      boss-bar: "Ues left: &b{uses} &7/ &b{max_uses}"
       damageable: true
     blaze-gun-ammo:
       name: "&6Blaze Gun Ammo"
@@ -26,6 +27,7 @@ messages:
       description: "Strikes lightning on your enemies"
       no-ammo: "&cYou need &b{item_name} &cto shoot!"
       broke: "&cTool broke!"
+      boss-bar: "Ues left: &b{uses} &7/ &b{max_uses}"
       damageable: true
     zapper-gun-ammo:
       name: "&6Zapper Gun Ammo"
@@ -34,6 +36,7 @@ messages:
       name: "&6Smelters Shovel"
       description: "&bSmelts sand into glass!"
       broke: "&cTool broke!"
+      boss-bar: "Ues left: &b{uses} &7/ &b{max_uses}"
       damageable: true
     sponge:
       name: "&6Sponge"
