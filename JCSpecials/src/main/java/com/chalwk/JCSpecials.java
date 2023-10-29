@@ -79,16 +79,9 @@ public class JCSpecials extends JavaPlugin implements SlimefunAddon {
         new ZapperGunAmmo(parentCategory, Items.ZAPPER_GUN_AMMO, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunAmmoRecipe, this);
         new SmeltersShovel(parentCategory, Items.SMELTERS_SHOVEL, RecipeType.ENHANCED_CRAFTING_TABLE, smeltersShovelRecipe, this);
         new Sponge(parentCategory, Items.SPONGE, RecipeType.ENHANCED_CRAFTING_TABLE, spongeRecipe, this);
-
-        registerResearch("blaze_gun", 7500, "Blaze Gun", 20, Items.BLAZE_GUN);
-        registerResearch("blaze_gun_ammo", 7501, "Blaze Gun Ammo", 10, Items.BLAZE_GUN_AMMO);
-        registerResearch("zapper_gun", 7502, "Zapper Gun", 20, Items.ZAPPER_GUN);
-        registerResearch("zapper_gun_ammo", 7503, "Zapper Gun Ammo", 10, Items.ZAPPER_GUN_AMMO);
-        registerResearch("smelters_shovel", 7504, "Smelters Shovel", 35, Items.SMELTERS_SHOVEL);
-        registerResearch("sponge", 7505, "Sponge", 10, Items.SPONGE);
     }
 
-    private void registerResearch(String key, int id, String name, int defaultCost, ItemStack... items) {
+    public void registerResearch(String key, int id, String name, int defaultCost, ItemStack... items) {
         Research research = new Research(new NamespacedKey(this, key), id, name, defaultCost);
         for (ItemStack item : items) {
             SlimefunItem sfItem = SlimefunItem.getByItem(item);

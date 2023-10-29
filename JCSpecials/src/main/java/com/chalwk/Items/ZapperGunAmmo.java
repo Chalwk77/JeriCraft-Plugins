@@ -2,6 +2,7 @@
 package com.chalwk.Items;
 
 import com.chalwk.JCSpecials;
+import com.chalwk.util.Items;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -10,10 +11,9 @@ import org.bukkit.inventory.ItemStack;
 
 public class ZapperGunAmmo extends SlimefunItem {
 
-    private static final JCSpecials instance = JCSpecials.getInstance();
-
     public ZapperGunAmmo(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
+        plugin.registerResearch("zapper_gun_ammo", 7503, "Zapper Gun Ammo", 10, Items.ZAPPER_GUN_AMMO);
     }
 }

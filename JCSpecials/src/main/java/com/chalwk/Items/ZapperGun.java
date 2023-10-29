@@ -2,6 +2,7 @@
 package com.chalwk.Items;
 
 import com.chalwk.JCSpecials;
+import com.chalwk.util.Items;
 import com.chalwk.util.Messages;
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -37,6 +38,7 @@ public class ZapperGun extends SlimefunItem {
     public ZapperGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
+        plugin.registerResearch("zapper_gun", 7502, "Zapper Gun", 20, Items.ZAPPER_GUN);
         maxUses = cfg.getInt("item-settings.zapper-gun.uses");
     }
 
