@@ -4,11 +4,11 @@ options:
 
 item-settings:
   smelters-shovel:
-    damageable: true
+    uses: 128
   blaze-gun:
-    damageable: true
+    uses: 15
   zapper-gun:
-    damageable: true
+    uses: 25
 
 messages:
   items:
@@ -16,6 +16,7 @@ messages:
       name: "&6Blaze Gun"
       description: "&bShoots burning magma cream!"
       no-ammo: "&cYou need &b{item_name} &cto shoot!"
+      broke: "&cTool broke!"
       damageable: true
     blaze-gun-ammo:
       name: "&6Blaze Gun Ammo"
@@ -24,6 +25,7 @@ messages:
       name: "&6Zapper Gun"
       description: "Strikes lightning on your enemies"
       no-ammo: "&cYou need &b{item_name} &cto shoot!"
+      broke: "&cTool broke!"
       damageable: true
     zapper-gun-ammo:
       name: "&6Zapper Gun Ammo"
@@ -31,4 +33,5 @@ messages:
     smelters-shovel:
       name: "&6Smelters Shovel"
       description: "&bSmelts sand/red sand into glass!"
+      broke: "&cTool broke!"
       damageable: true

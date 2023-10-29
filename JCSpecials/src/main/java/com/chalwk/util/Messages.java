@@ -6,13 +6,16 @@ import org.bukkit.ChatColor;
 
 public enum Messages {
 
-    BLAZE_GUN_NO_AMMO("items.blaze-gun.no-ammo"),
-    ZAPPER_GUN_NO_AMMO("items.zapper-gun.no-ammo");
+    BLAZE_GUN_NO_AMMO("blaze-gun.no-ammo"),
+    ZAPPER_GUN_NO_AMMO("zapper-gun.no-ammo"),
+    BLAZE_GUN_BROKE("blaze-gun.broke"),
+    SMELTERS_SHOVEL_BROKE("smelters-shovel.broke"),
+    ZAPPER_GUN_BROKE("zapper-gun.broke");
 
     private final String message;
 
     Messages(String path) {
-        message = color(JCSpecials.getInstance().getConfig().getString("messages." + path));
+        message = color(JCSpecials.getInstance().getConfig().getString("messages.items." + path));
     }
 
     private String color(String str) {
