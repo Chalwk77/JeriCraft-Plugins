@@ -32,7 +32,7 @@ messages:
       description: "&bAmmo for the Zapper Gun!"
     smelters-shovel:
       name: "&6Smelters Shovel"
-      description: "&bSmelts sand/red sand into glass!"
+      description: "&bSmelts sand into glass!"
       broke: "&cTool broke!"
       damageable: true
     sponge:
