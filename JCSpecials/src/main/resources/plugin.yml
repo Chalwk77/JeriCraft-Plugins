@@ -1,8 +1,8 @@
-name: ExtraWeapons
+name: JCSpecials
 author: Chalwk
 description: Adds new weapons to the Slimefun4 plugin.
-main: com.chalwk.ExtraWeapons
-website: https://github.com/Chalwk77/JeriCraft-Plugins/tree/main/ExtraWeapons
+main: com.chalwk.JCSpecials
+website: https://github.com/Chalwk77/JeriCraft-Plugins/tree/main/JCSpecials
 version: ${project.version}
 api-version: 1.14
 depend:

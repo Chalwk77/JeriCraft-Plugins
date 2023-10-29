@@ -1,17 +1,16 @@
 /* Copyright (c) 2023, JeriCraft-Plugins. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.Items;
 
+import com.chalwk.JCSpecials;
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockPlaceHandler;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
-import org.bukkit.Location;
-import org.bukkit.Particle;
-import org.bukkit.Sound;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.Inventory;
@@ -26,8 +25,15 @@ import static com.chalwk.util.util.send;
 
 public class ZapperGun extends SlimefunItem {
 
+    private static final int cost = 20;
+    private static final int researchID = 7502;
+    private static final String defaultName = "Zapper Gun";
+    private static final JCSpecials instance = JCSpecials.getInstance();
+
     public ZapperGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
+        this.register(instance);
+        new Research(new NamespacedKey(instance, "zapper_gun"), researchID, defaultName, cost).addItems(this);
     }
 
     @Override

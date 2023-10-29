@@ -11,11 +11,12 @@
         <module name="Magnet" />
         <module name="HealMe" />
         <module name="TacticalInsertion" />
-        <module name="ExtraWeapons" />
         <module name="BigBrother" />
+        <module name="JCSpecials" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ExtraWeapons" target="1.8" />
       <module name="Feed" target="1.8" />
       <module name="JeriCraftPerkGUI" target="1.8" />
       <module name="magnet" target="1.8" />

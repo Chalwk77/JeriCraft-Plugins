@@ -1,13 +1,16 @@
-/* Copyright (c) 2023, ExtraWeapons. Jericho Crosby <jericho.crosby227@gmail.com> */
+/* Copyright (c) 2023, JCSpecials. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.Items;
 
+import com.chalwk.JCSpecials;
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import org.bukkit.Location;
+import org.bukkit.NamespacedKey;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.entity.Fireball;
@@ -20,8 +23,15 @@ import static com.chalwk.util.util.send;
 
 public class BlazeGun extends SlimefunItem {
 
+    private static final int cost = 20;
+    private static final int researchID = 7500;
+    private static final String defaultName = "Blaze Gun";
+    private static final JCSpecials instance = JCSpecials.getInstance();
+
     public BlazeGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
+        this.register(instance);
+        new Research(new NamespacedKey(instance, "blaze_gun"), researchID, defaultName, cost).addItems(this);
     }
 
     @Override

@@ -1,6 +1,6 @@
-ExtraWeapons is a Slimefun4 addon that adds new weapons to the game.
+JCSpecials is a Slimefun4 addon that adds new weapons to the game.
 
-Introducing **ExtraWeapons**, a custom Slimefun addon.
+Introducing **JCSpecials**, a custom Slimefun addon.
 
 New items:
 
