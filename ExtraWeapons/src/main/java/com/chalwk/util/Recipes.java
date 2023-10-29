@@ -21,9 +21,9 @@ public class Recipes {
     public static BlazeGun getBlazeGun(ItemGroup itemGroup) {
         SlimefunItemStack blazeGun = new SlimefunItemStack("BLAZE_GUN", Material.BLAZE_ROD, "&6Blaze Gun", "&bShoots burning magma cream");
         /* RECIPE LAYOUT:
-            [BP] [  ] [BP]
-            [  ] [S ] [  ]
-            [BP] [  ] [BP]
+            [BP] [   ] [BP]
+            [  ] [ S ] [  ]
+            [BP] [   ] [BP]
         */
         return new BlazeGun(itemGroup, blazeGun, RecipeType.ENHANCED_CRAFTING_TABLE,
                 new ItemStack[]{
