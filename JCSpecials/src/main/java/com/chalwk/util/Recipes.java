@@ -64,7 +64,7 @@ public class Recipes {
     }
 
     public static void getSmeltersShovel(ItemGroup itemGroup) {
-        SlimefunItemStack smeltersShovel = new SlimefunItemStack("SMELTERS_SHOVEL", Material.NETHERITE_SHOVEL, "&6Smelters Shovel", "&bSmelts sand into glass");
+        SlimefunItemStack smeltersShovel = new SlimefunItemStack("SMELTERS_SHOVEL", Material.NETHERITE_SHOVEL, "&6Smelters Shovel", "&bSmelts sand/red sand into glass");
         new SmeltersShovel(itemGroup, smeltersShovel, RecipeType.ENHANCED_CRAFTING_TABLE, smeltersShovelRecipe);
     }
 }

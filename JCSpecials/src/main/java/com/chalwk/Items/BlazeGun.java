@@ -2,6 +2,7 @@
 package com.chalwk.Items;
 
 import com.chalwk.JCSpecials;
+import com.chalwk.util.Messages;
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
@@ -19,7 +20,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import static com.chalwk.util.Recipes.BLAZE_GUN_AMMO;
-import static com.chalwk.util.util.send;
 
 public class BlazeGun extends SlimefunItem {
 
@@ -42,19 +42,19 @@ public class BlazeGun extends SlimefunItem {
 
     private void onItemUseRightClick(PlayerRightClickEvent event) {
 
-        Player player = event.getPlayer();
-        Location location = player.getLocation();
-        Inventory inv = player.getInventory();
+        Player p = event.getPlayer();
+        Location location = p.getLocation();
+        Inventory inv = p.getInventory();
 
         if (inv.containsAtLeast(BLAZE_GUN_AMMO, 1)) {
             inv.removeItem(BLAZE_GUN_AMMO);
-            player.playSound(location, Sound.ENTITY_BLAZE_SHOOT, 1, 1);
-            player.spawnParticle(Particle.FLAME, location, 1);
-            player.launchProjectile(Fireball.class).setIsIncendiary(true);
+            p.playSound(location, Sound.ENTITY_BLAZE_SHOOT, 1, 1);
+            p.spawnParticle(Particle.FLAME, location, 1);
+            p.launchProjectile(Fireball.class).setIsIncendiary(true);
         } else {
             String itemName = BLAZE_GUN_AMMO.getItemMeta().getDisplayName();
-            player.playSound(location, Sound.ENTITY_BLAZE_HURT, 1, 1);
-            send(player, "&cYou need &b" + itemName + " &cto shoot!");
+            p.playSound(location, Sound.ENTITY_BLAZE_HURT, 1, 1);
+            p.sendMessage(Messages.BLAZE_GUN_NO_AMMO.getMessage().replace("{item_name}", itemName));
         }
     }
 }

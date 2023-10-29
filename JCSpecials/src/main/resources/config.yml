@@ -7,7 +7,10 @@ item-settings:
 
 messages:
   items:
+    blaze-gun:
+      no-ammo: "&cYou need &b{item_name} &cto shoot!"
+    zapper-gun:
+      no-ammo: "&cYou need &b{item_name} &cto shoot!"
     smelters-shovel:
       block-break: "&cYou cannot smelt this block!"
-      cooldown: "&cYou cannot do that now. You need to wait &e{time} &cmore milliseconds!"
       damageable: true

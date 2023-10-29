@@ -7,7 +7,9 @@ import org.bukkit.ChatColor;
 public enum Messages {
 
     SMELTERS_SHOVEL_BLOCK_BREAK("items.smelters-shovel.block-break"),
-    SMELTERS_SHOVEL_COOLDOWN("items.smelters-shovel.cooldown");
+    SMELTERS_SHOVEL_COOLDOWN("items.smelters-shovel.cooldown"),
+    BLAZE_GUN_NO_AMMO("items.blaze-gun.no-ammo"),
+    ZAPPER_GUN_NO_AMMO("items.zapper-gun.no-ammo");
 
     private final String message;
 

@@ -2,6 +2,7 @@
 package com.chalwk.Items;
 
 import com.chalwk.JCSpecials;
+import com.chalwk.util.Messages;
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
@@ -21,7 +22,6 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 import static com.chalwk.util.Recipes.ZAPPER_GUN_AMMO;
-import static com.chalwk.util.util.send;
 
 public class ZapperGun extends SlimefunItem {
 
@@ -52,27 +52,27 @@ public class ZapperGun extends SlimefunItem {
 
     private void onItemUseRightClick(PlayerRightClickEvent event) {
 
-        Player player = event.getPlayer();
-        Inventory inv = player.getInventory();
+        Player p = event.getPlayer();
+        Inventory inv = p.getInventory();
 
         if (inv.containsAtLeast(ZAPPER_GUN_AMMO, 1)) {
             inv.removeItem(ZAPPER_GUN_AMMO);
 
-            Location location = player.getLocation();
-            World world = player.getWorld();
+            Location location = p.getLocation();
+            World world = p.getWorld();
 
             Random random = ThreadLocalRandom.current();
             for (int i = 0; i < 5; i++) {
                 world.spawnParticle(Particle.FIREWORKS_SPARK, location.add(random.nextDouble(), random.nextDouble(), random.nextDouble()), 1);
-                world.strikeLightning(player.getTargetBlock(null, 100).getLocation());
+                world.strikeLightning(p.getTargetBlock(null, 100).getLocation());
             }
 
-            player.playSound(player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1, 1);
-            player.spawnParticle(Particle.FIREWORKS_SPARK, player.getLocation(), 1);
+            p.playSound(p.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1, 1);
+            p.spawnParticle(Particle.FIREWORKS_SPARK, p.getLocation(), 1);
         } else {
             String itemName = ZAPPER_GUN_AMMO.getItemMeta().getDisplayName();
-            player.playSound(player.getLocation(), Sound.ENTITY_BLAZE_HURT, 1, 1);
-            send(player, "&cYou need &b" + itemName + " &cto shoot!");
+            p.playSound(p.getLocation(), Sound.ENTITY_BLAZE_HURT, 1, 1);
+            p.sendMessage(Messages.ZAPPER_GUN_NO_AMMO.getMessage().replace("{item_name}", itemName));
         }
     }
 }
