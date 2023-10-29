@@ -1,4 +1,4 @@
-/* Copyright (c) 2023, JeriCraft-Plugins. Jericho Crosby <jericho.crosby227@gmail.com> */
+/* Copyright (c) 2023, JCSpecials. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk.Items;
 
 import com.chalwk.JCSpecials;
@@ -8,10 +8,14 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.api.researches.Research;
+import io.github.thebusybiscuit.slimefun4.core.attributes.DamageableItem;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockPlaceHandler;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
-import org.bukkit.*;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
+import org.bukkit.Location;
+import org.bukkit.Particle;
+import org.bukkit.Sound;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.Inventory;
@@ -21,19 +25,18 @@ import javax.annotation.Nonnull;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static com.chalwk.util.Recipes.ZAPPER_GUN_AMMO;
+import static com.chalwk.util.Items.ZAPPER_GUN_AMMO;
 
-public class ZapperGun extends SlimefunItem {
+public class ZapperGun extends SlimefunItem implements DamageableItem {
 
-    private static final int cost = 20;
-    private static final int researchID = 7502;
-    private static final String defaultName = "Zapper Gun";
     private static final JCSpecials instance = JCSpecials.getInstance();
+    private final boolean damageable;
 
     public ZapperGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
         this.register(instance);
-        new Research(new NamespacedKey(instance, "zapper_gun"), researchID, defaultName, cost).addItems(this);
+        Config cfg = new Config(instance);
+        damageable = cfg.getBoolean("item-settings.zapper-gun.damageable");
     }
 
     @Override
@@ -69,10 +72,23 @@ public class ZapperGun extends SlimefunItem {
 
             p.playSound(p.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1, 1);
             p.spawnParticle(Particle.FIREWORKS_SPARK, p.getLocation(), 1);
+            if (isDamageable())
+                damageItem(p);
+
         } else {
             String itemName = ZAPPER_GUN_AMMO.getItemMeta().getDisplayName();
             p.playSound(p.getLocation(), Sound.ENTITY_BLAZE_HURT, 1, 1);
             p.sendMessage(Messages.ZAPPER_GUN_NO_AMMO.getMessage().replace("{item_name}", itemName));
         }
+    }
+
+    private void damageItem(Player p) {
+        ItemStack itemInMainHand = p.getInventory().getItemInMainHand();
+        damageItem(p, itemInMainHand);
+    }
+
+    @Override
+    public boolean isDamageable() {
+        return damageable;
     }
 }

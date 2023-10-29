@@ -6,7 +6,6 @@ import com.chalwk.util.ItemInteractHandler;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import io.github.thebusybiscuit.slimefun4.core.attributes.DamageableItem;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ToolUseHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
@@ -15,7 +14,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
 import org.bukkit.Effect;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -23,17 +21,13 @@ import org.jetbrains.annotations.NotNull;
 
 public class SmeltersShovel extends SimpleSlimefunItem<ItemInteractHandler> implements DamageableItem {
 
-    private static final int cost = 20;
-    private static final int researchID = 7504;
-    private static final String defaultName = "Smelters Shovel";
-    private final boolean damageable;
     private static final JCSpecials instance = JCSpecials.getInstance();
+    private final boolean damageable;
 
     public SmeltersShovel(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
 
         super(itemGroup, item, recipeType, recipe);
         this.register(instance);
-        new Research(new NamespacedKey(instance, "smelters_shovel"), researchID, defaultName, cost).addItems(this);
 
         Config cfg = new Config(instance);
         damageable = cfg.getBoolean("item-settings.smelters-shovel.damageable");

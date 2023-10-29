@@ -1,16 +1,34 @@
 options:
   auto-update: true
   debug: false
+
 item-settings:
   smelters-shovel:
-    cooldown: 500
+    damageable: true
+  blaze-gun:
+    damageable: true
+  zapper-gun:
+    damageable: true
 
 messages:
   items:
     blaze-gun:
+      name: "&6Blaze Gun"
+      description: "&bShoots burning magma cream!"
       no-ammo: "&cYou need &b{item_name} &cto shoot!"
+      damageable: true
+    blaze-gun-ammo:
+      name: "&6Blaze Gun Ammo"
+      description: "&bAmmo for the Blaze Gun!"
     zapper-gun:
+      name: "&6Zapper Gun"
+      description: "Strikes lightning on your enemies"
       no-ammo: "&cYou need &b{item_name} &cto shoot!"
+      damageable: true
+    zapper-gun-ammo:
+      name: "&6Zapper Gun Ammo"
+      description: "&bAmmo for the Zapper Gun!"
     smelters-shovel:
-      block-break: "&cYou cannot smelt this block!"
+      name: "&6Smelters Shovel"
+      description: "&bSmelts sand/red sand into glass!"
       damageable: true

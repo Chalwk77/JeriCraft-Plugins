@@ -2,17 +2,23 @@
 
 package com.chalwk;
 
+import com.chalwk.Items.*;
 import com.chalwk.Listeners.PlayerListener;
+import com.chalwk.util.Items;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
-import static com.chalwk.util.Recipes.*;
+import static com.chalwk.util.Items.*;
 
 public class JCSpecials extends JavaPlugin implements SlimefunAddon {
 
@@ -64,11 +70,28 @@ public class JCSpecials extends JavaPlugin implements SlimefunAddon {
             getLogger().info("Setting up items...");
         }
 
-        getBlazeGun(parentCategory);
-        getBlazeGunAmmo(parentCategory);
-        getZapperGun(parentCategory);
-        getZapperGunAmmo(parentCategory);
-        getSmeltersShovel(parentCategory);
+        new BlazeGun(parentCategory, Items.BLAZE_GUN, RecipeType.ENHANCED_CRAFTING_TABLE, blazeGunRecipe);
+        new BlazeGunAmmo(parentCategory, Items.BLAZE_GUN_AMMO, RecipeType.ENHANCED_CRAFTING_TABLE, blazeGunAmmoRecipe);
+        new ZapperGun(parentCategory, Items.ZAPPER_GUN, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunRecipe);
+        new ZapperGunAmmo(parentCategory, Items.ZAPPER_GUN_AMMO, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunAmmoRecipe);
+        new SmeltersShovel(parentCategory, Items.SMELTERS_SHOVEL, RecipeType.ENHANCED_CRAFTING_TABLE, smeltersShovelRecipe);
+
+        registerResearch("blaze_gun", 7500, "Blaze Gun", 20, Items.BLAZE_GUN);
+        registerResearch("blaze_gun_ammo", 7501, "Blaze Gun Ammo", 10, Items.BLAZE_GUN_AMMO);
+        registerResearch("zapper_gun", 7502, "Zapper Gun", 20, Items.ZAPPER_GUN);
+        registerResearch("zapper_gun_ammo", 7503, "Zapper Gun Ammo", 10, Items.ZAPPER_GUN_AMMO);
+        registerResearch("smelters_shovel", 7504, "Smelters Shovel", 35, Items.SMELTERS_SHOVEL);
+    }
+
+    private void registerResearch(String key, int id, String name, int defaultCost, ItemStack... items) {
+        Research research = new Research(new NamespacedKey(this, key), id, name, defaultCost);
+        for (ItemStack item : items) {
+            SlimefunItem sfItem = SlimefunItem.getByItem(item);
+            if (sfItem != null) {
+                research.addItems(sfItem);
+            }
+        }
+        research.register();
     }
 
     @Override
