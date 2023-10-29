@@ -6,15 +6,18 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.core.handlers.BlockPlaceHandler;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import javax.annotation.Nonnull;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -31,6 +34,14 @@ public class ZapperGun extends SlimefunItem {
     public void preRegister() {
         ItemUseHandler itemUseHandler = this::onItemUseRightClick;
         addItemHandler(itemUseHandler);
+        addItemHandler(
+                new BlockPlaceHandler(false) {
+                    @Override
+                    public void onPlayerPlace(@Nonnull BlockPlaceEvent event) {
+                        event.setCancelled(true);
+                    }
+                }
+        );
     }
 
     private void onItemUseRightClick(PlayerRightClickEvent event) {
