@@ -75,12 +75,14 @@ public class JCSpecials extends JavaPlugin implements SlimefunAddon {
         new ZapperGun(parentCategory, Items.ZAPPER_GUN, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunRecipe);
         new ZapperGunAmmo(parentCategory, Items.ZAPPER_GUN_AMMO, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunAmmoRecipe);
         new SmeltersShovel(parentCategory, Items.SMELTERS_SHOVEL, RecipeType.ENHANCED_CRAFTING_TABLE, smeltersShovelRecipe);
+        new Sponge(parentCategory, Items.SPONGE, RecipeType.ENHANCED_CRAFTING_TABLE, spongeRecipe);
 
         registerResearch("blaze_gun", 7500, "Blaze Gun", 20, Items.BLAZE_GUN);
         registerResearch("blaze_gun_ammo", 7501, "Blaze Gun Ammo", 10, Items.BLAZE_GUN_AMMO);
         registerResearch("zapper_gun", 7502, "Zapper Gun", 20, Items.ZAPPER_GUN);
         registerResearch("zapper_gun_ammo", 7503, "Zapper Gun Ammo", 10, Items.ZAPPER_GUN_AMMO);
         registerResearch("smelters_shovel", 7504, "Smelters Shovel", 35, Items.SMELTERS_SHOVEL);
+        registerResearch("sponge", 7505, "Sponge", 10, Items.SPONGE);
     }
 
     private void registerResearch(String key, int id, String name, int defaultCost, ItemStack... items) {

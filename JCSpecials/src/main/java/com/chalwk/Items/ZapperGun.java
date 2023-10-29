@@ -26,7 +26,7 @@ import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static com.chalwk.util.Items.BLAZE_GUN;
+import static com.chalwk.util.Items.ZAPPER_GUN;
 import static com.chalwk.util.Items.ZAPPER_GUN_AMMO;
 
 public class ZapperGun extends SlimefunItem {
@@ -92,8 +92,8 @@ public class ZapperGun extends SlimefunItem {
         if (lastUse != null) {
             uses.put(uuid, lastUse + 1);
             if (uses.get(uuid) >= maxUses) {
-                p.getInventory().removeItem(BLAZE_GUN);
-                p.sendMessage(Messages.BLAZE_GUN_BROKE.getMessage());
+                p.getInventory().removeItem(ZAPPER_GUN);
+                p.sendMessage(Messages.ZAPPER_GUN_BROKE.getMessage());
                 p.playSound(location, Sound.ENTITY_ITEM_BREAK, 1, 1);
                 return true;
             }

@@ -35,3 +35,6 @@ messages:
       description: "&bSmelts sand/red sand into glass!"
       broke: "&cTool broke!"
       damageable: true
+    sponge:
+      name: "&6Sponge"
+      description: "&bAbsorbs water!"

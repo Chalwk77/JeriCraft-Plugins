@@ -36,6 +36,11 @@ public class Items {
             null, SlimefunItems.REINFORCED_ALLOY_INGOT, null,
             null, SlimefunItems.REINFORCED_ALLOY_INGOT, null
     };
+    public static final ItemStack[] spongeRecipe = {
+            new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH),
+            new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH),
+            new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH)
+    };
 
     private static final FileConfiguration cfg = JCSpecials.getInstance().getConfig();
 
@@ -46,32 +51,34 @@ public class Items {
             cfg.getString("messages.items.blaze-gun.name"),
             cfg.getString("messages.items.blaze-gun.description")
     );
-
     public static SlimefunItemStack BLAZE_GUN_AMMO = new SlimefunItemStack(
             "BLAZE_GUN_AMMO",
             Material.MAGMA_CREAM,
             cfg.getString("messages.items.blaze-gun-ammo.name"),
             cfg.getString("messages.items.blaze-gun-ammo.description")
     );
-
     public static SlimefunItemStack ZAPPER_GUN = new SlimefunItemStack(
             "ZAPPER_GUN",
             Material.LIGHTNING_ROD,
             cfg.getString("messages.items.zapper-gun.name"),
             cfg.getString("messages.items.zapper-gun.description")
     );
-
     public static SlimefunItemStack ZAPPER_GUN_AMMO = new SlimefunItemStack(
             "ZAPPER_GUN_AMMO",
             Material.NETHER_STAR,
             cfg.getString("messages.items.zapper-gun-ammo.name"),
             cfg.getString("messages.items.zapper-gun-ammo.description")
     );
-
     public static SlimefunItemStack SMELTERS_SHOVEL = new SlimefunItemStack(
             "SMELTERS_SHOVEL",
             Material.NETHERITE_SHOVEL,
             cfg.getString("messages.items.smelters-shovel.name"),
             cfg.getString("messages.items.smelters-shovel.description")
+    );
+    public static SlimefunItemStack SPONGE = new SlimefunItemStack(
+            "SPONGE",
+            Material.SPONGE,
+            cfg.getString("messages.items.sponge.name"),
+            cfg.getString("messages.items.sponge.description")
     );
 }
