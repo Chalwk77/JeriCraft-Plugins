@@ -53,7 +53,7 @@ public class Recipes {
 
     @NotNull
     public static ZapperGun getZapperGun(ItemGroup itemGroup) {
-        SlimefunItemStack zapperGun = new SlimefunItemStack("ZAPPER_GUN", Material.REDSTONE_TORCH, "&6Zapper Gun", "&bStrikes lightning on your enemies");
+        SlimefunItemStack zapperGun = new SlimefunItemStack("ZAPPER_GUN", Material.LIGHTNING_ROD, "&6Zapper Gun", "&bStrikes lightning on your enemies");
         /* RECIPE LAYOUT:
             [NS] [  ] [NS]
             [  ] [LR] [  ]
@@ -69,7 +69,7 @@ public class Recipes {
 
     @NotNull
     public static ZapperGunAmmo getZapperGunAmmo(ItemGroup itemGroup) {
-        SlimefunItemStack zapperGunAmmo = new SlimefunItemStack("ZAPPER_GUN_AMMO", Material.REDSTONE, "&6Zapper Gun Ammo", "&bUsed with Zapper Gun");
+        SlimefunItemStack zapperGunAmmo = new SlimefunItemStack("ZAPPER_GUN_AMMO", Material.NETHER_STAR, "&6Zapper Gun Ammo", "&bUsed with Zapper Gun");
         ZAPPER_GUN_AMMO = zapperGunAmmo;
         /* RECIPE LAYOUT:
             [NS] [NS] [NS]
