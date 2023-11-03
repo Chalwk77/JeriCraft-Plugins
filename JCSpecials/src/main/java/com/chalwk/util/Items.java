@@ -42,6 +42,18 @@ public class Items {
             new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH)
     };
 
+    public static final ItemStack[] witherGunRecipe = {
+            null, null, SlimefunItems.BLISTERING_INGOT_3,
+            null, new ItemStack(Material.STICK), null,
+            SlimefunItems.REINFORCED_ALLOY_INGOT, null, null
+    };
+
+    public static final ItemStack[] witherGunAmmoRecipe = {
+            null, new ItemStack(SlimefunItems.MAGIC_LUMP_3), null,
+            new ItemStack(SlimefunItems.MAGIC_LUMP_3), new ItemStack(SlimefunItems.NECROTIC_SKULL), new ItemStack(SlimefunItems.MAGIC_LUMP_3),
+            null, new ItemStack(SlimefunItems.MAGIC_LUMP_3), null
+    };
+
     /* ITEMS STACKS: */
     public static SlimefunItemStack BLAZE_GUN = new SlimefunItemStack(
             "BLAZE_GUN",
@@ -78,5 +90,19 @@ public class Items {
             Material.SPONGE,
             cfg.getString("messages.items.sponge.name"),
             cfg.getString("messages.items.sponge.description")
+    );
+
+    public static SlimefunItemStack WITHER_GUN = new SlimefunItemStack(
+            "WITHER_GUN",
+            Material.BLAZE_ROD,
+            cfg.getString("messages.items.wither-gun.name"),
+            cfg.getString("messages.items.wither-gun.description")
+    );
+
+    public static SlimefunItemStack WITHER_GUN_AMMO = new SlimefunItemStack(
+            "WITHER_GUN_AMMO",
+            SlimefunItems.NECROTIC_SKULL,
+            cfg.getString("messages.items.wither-gun-ammo.name"),
+            cfg.getString("messages.items.wither-gun-ammo.description")
     );
 }

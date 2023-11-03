@@ -38,7 +38,7 @@ public class ZapperGun extends SlimefunItem {
     public ZapperGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("zapper_gun", 7502, "Zapper Gun", 20, Items.ZAPPER_GUN);
+        plugin.registerResearch("zapper_gun", 7506, "Zapper Gun", 20, Items.ZAPPER_GUN);
         maxUses = cfg.getInt("item-settings.zapper-gun.uses");
     }
 
@@ -68,16 +68,8 @@ public class ZapperGun extends SlimefunItem {
             if (breakItem(p, location)) return;
 
             inv.removeItem(ZAPPER_GUN_AMMO);
-            World world = p.getWorld();
+            spawnLightning(p, location);
 
-            Random random = ThreadLocalRandom.current();
-            for (int i = 0; i < 5; i++) {
-                world.spawnParticle(Particle.FIREWORKS_SPARK, location.add(random.nextDouble(), random.nextDouble(), random.nextDouble()), 1);
-                world.strikeLightning(p.getTargetBlock(null, 100).getLocation());
-            }
-
-            p.playSound(p.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1, 1);
-            p.spawnParticle(Particle.FIREWORKS_SPARK, p.getLocation(), 1);
             p.sendActionBar(Messages.ZAPPER_GUN_BOSS_BAR.getMessage()
                     .replace("{uses}", String.valueOf(uses.get(p.getUniqueId())))
                     .replace("{max_uses}", String.valueOf(maxUses)));
@@ -86,6 +78,16 @@ public class ZapperGun extends SlimefunItem {
             String itemName = ZAPPER_GUN_AMMO.getItemMeta().getDisplayName();
             p.playSound(p.getLocation(), Sound.ENTITY_BLAZE_HURT, 1, 1);
             p.sendMessage(Messages.ZAPPER_GUN_NO_AMMO.getMessage().replace("{item_name}", itemName));
+        }
+    }
+
+    private void spawnLightning(Player p, Location location) {
+        World world = p.getWorld();
+        p.playSound(p.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1, 1);
+        Random random = ThreadLocalRandom.current();
+        for (int i = 0; i < 5; i++) {
+            world.strikeLightning(p.getTargetBlock(null, 100).getLocation());
+            world.spawnParticle(Particle.FIREWORKS_SPARK, location.add(random.nextDouble(), random.nextDouble(), random.nextDouble()), 1);
         }
     }
 

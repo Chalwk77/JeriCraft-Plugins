@@ -15,6 +15,4 @@ public interface ItemInteractHandler extends ItemHandler {
     default @NotNull Class<? extends ItemHandler> getIdentifier() {
         return ItemInteractHandler.class;
     }
-
-    // todo: add other default methods
 }

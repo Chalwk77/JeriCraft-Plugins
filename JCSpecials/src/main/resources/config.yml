@@ -8,6 +8,8 @@ item-settings:
     uses: 228
   zapper-gun:
     uses: 228
+  wither-gun:
+    uses: 328
 messages:
   plugin-reload: "&aJCSpecials reloaded!"
   no-permission: "&cYou do not have permission to use this command!"
@@ -41,3 +43,13 @@ messages:
     sponge:
       name: "&6Sponge"
       description: "&bAbsorbs water!"
+    wither-gun:
+      name: "&6Wither Gun"
+      description: "&bShoots wither skulls!"
+      no-ammo: "&cYou need &b{item_name} &cto shoot!"
+      broke: "&cTool broke!"
+      boss-bar: "Ues left: &b{uses} &7/ &b{max_uses}"
+      damageable: true
+    wither-gun-ammo:
+      name: "&6Wither Gun Ammo"
+      description: "&bAmmo for the Wither Gun!"

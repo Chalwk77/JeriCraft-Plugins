@@ -2,7 +2,6 @@
 package com.chalwk.Items;
 
 import com.chalwk.JCSpecials;
-import com.chalwk.util.Items;
 import com.chalwk.util.Messages;
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -12,8 +11,8 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import org.bukkit.Location;
 import org.bukkit.Sound;
-import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.WitherSkull;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
@@ -21,19 +20,19 @@ import java.util.HashMap;
 import java.util.UUID;
 
 import static com.chalwk.JCSpecials.cfg;
-import static com.chalwk.util.Items.BLAZE_GUN;
-import static com.chalwk.util.Items.BLAZE_GUN_AMMO;
+import static com.chalwk.util.Items.WITHER_GUN;
+import static com.chalwk.util.Items.WITHER_GUN_AMMO;
 
-public class BlazeGun extends SlimefunItem {
+public class WitherGun extends SlimefunItem {
 
     private final HashMap<UUID, Long> uses = new HashMap<>();
     private final int maxUses;
 
-    public BlazeGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
+    public WitherGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("blaze_gun", 7500, "Blaze Gun", 20, Items.BLAZE_GUN);
-        maxUses = cfg.getInt("item-settings.blaze-gun.uses");
+        plugin.registerResearch("wither_gun", 7801, "Wither Gun", 20, WITHER_GUN);
+        maxUses = cfg.getInt("item-settings.wither-gun.uses");
     }
 
     @Override
@@ -49,26 +48,22 @@ public class BlazeGun extends SlimefunItem {
         Inventory inv = p.getInventory();
         e.cancel();
 
-        if (inv.containsAtLeast(BLAZE_GUN_AMMO, 1)) {
+        if (inv.containsAtLeast(WITHER_GUN_AMMO, 1)) {
             if (breakItem(p, location)) return;
-            inv.removeItem(BLAZE_GUN_AMMO);
+            inv.removeItem(WITHER_GUN_AMMO);
             fireProjectile(p, location);
-            p.sendActionBar(Messages.BLAZE_GUN_BOSS_BAR.getMessage()
-                    .replace("{uses}", String.valueOf(uses.get(p.getUniqueId())))
-                    .replace("{max_uses}", String.valueOf(maxUses)));
         } else if (!breakItem(p, location)) {
-            String itemName = BLAZE_GUN_AMMO.getItemMeta().getDisplayName();
+            String itemName = WITHER_GUN_AMMO.getItemMeta().getDisplayName();
             p.playSound(location, Sound.ENTITY_BLAZE_HURT, 1, 1);
-            p.sendMessage(Messages.BLAZE_GUN_NO_AMMO.getMessage().replace("{item_name}", itemName));
+            p.sendMessage(Messages.WITHER_GUN_NO_AMMO.getMessage().replace("{item_name}", itemName));
         }
     }
 
     private void fireProjectile(Player p, Location location) {
-        p.playSound(location, Sound.ENTITY_BLAZE_SHOOT, 1, 1);
-        Fireball fireball = p.launchProjectile(Fireball.class);
-        fireball.setVelocity(location.getDirection().multiply(2));
-        fireball.setYield(5);
-        fireball.setIsIncendiary(false);
+        p.playSound(location, Sound.ENTITY_WITHER_SHOOT, 1, 1);
+        WitherSkull item = p.launchProjectile(WitherSkull.class);
+        item.setVelocity(p.getLocation().getDirection().multiply(2));
+        item.setYield(10);
     }
 
     private boolean breakItem(Player p, Location location) {
@@ -77,8 +72,8 @@ public class BlazeGun extends SlimefunItem {
         if (lastUse != null) {
             uses.put(uuid, lastUse + 1);
             if (uses.get(uuid) >= maxUses) {
-                p.getInventory().removeItem(BLAZE_GUN);
-                p.sendMessage(Messages.BLAZE_GUN_BROKE.getMessage());
+                p.getInventory().removeItem(WITHER_GUN);
+                p.sendMessage(Messages.WITHER_GUN_BROKE.getMessage());
                 p.playSound(location, Sound.ENTITY_ITEM_BREAK, 1, 1);
                 uses.put(uuid, 0L);
                 return true;

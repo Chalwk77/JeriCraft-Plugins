@@ -16,7 +16,10 @@ public enum Messages {
     ZAPPER_GUN_BROKE("items.zapper-gun.broke"),
     ZAPPER_GUN_BOSS_BAR("items.zapper-gun.boss-bar"),
     SMELTERS_SHOVEL_BROKE("items.smelters-shovel.broke"),
-    SMELTERS_SHOVEL_BOSS_BAR("items.smelters-shovel.boss-bar");
+    SMELTERS_SHOVEL_BOSS_BAR("items.smelters-shovel.boss-bar"),
+    WITHER_GUN_BOSS_BAR("items.wither-gun.boss-bar"),
+    WITHER_GUN_NO_AMMO("items.wither-gun.no-ammo"),
+    WITHER_GUN_BROKE("items.wither-gun.broke");
 
     private final String message;
 
@@ -31,5 +34,4 @@ public enum Messages {
     public String getMessage() {
         return message;
     }
-
 }

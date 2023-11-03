@@ -79,6 +79,8 @@ public class JCSpecials extends JavaPlugin implements SlimefunAddon {
         new ZapperGunAmmo(parentCategory, Items.ZAPPER_GUN_AMMO, RecipeType.ENHANCED_CRAFTING_TABLE, zapperGunAmmoRecipe, this);
         new SmeltersShovel(parentCategory, Items.SMELTERS_SHOVEL, RecipeType.ENHANCED_CRAFTING_TABLE, smeltersShovelRecipe, this);
         new Sponge(parentCategory, Items.SPONGE, RecipeType.ENHANCED_CRAFTING_TABLE, spongeRecipe, this);
+        new WitherGun(parentCategory, Items.WITHER_GUN, RecipeType.ENHANCED_CRAFTING_TABLE, witherGunRecipe, this);
+        new WitherGunAmmo(parentCategory, Items.WITHER_GUN_AMMO, RecipeType.ENHANCED_CRAFTING_TABLE, witherGunAmmoRecipe, this);
     }
 
     public void registerResearch(String key, int id, String name, int defaultCost, ItemStack... items) {
