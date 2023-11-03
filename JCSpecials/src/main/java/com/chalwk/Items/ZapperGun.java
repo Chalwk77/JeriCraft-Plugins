@@ -2,7 +2,6 @@
 package com.chalwk.Items;
 
 import com.chalwk.JCSpecials;
-import com.chalwk.util.Items;
 import com.chalwk.util.Messages;
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -38,7 +37,7 @@ public class ZapperGun extends SlimefunItem {
     public ZapperGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("zapper_gun", 7506, "Zapper Gun", 20, Items.ZAPPER_GUN);
+        plugin.registerResearch("zapper_gun", 7506, "Zapper Gun", 20, ZAPPER_GUN);
         maxUses = cfg.getInt("item-settings.zapper-gun.uses");
     }
 
@@ -64,12 +63,9 @@ public class ZapperGun extends SlimefunItem {
 
         e.cancel();
         if (inv.containsAtLeast(ZAPPER_GUN_AMMO, 1)) {
-
             if (breakItem(p, location)) return;
-
             inv.removeItem(ZAPPER_GUN_AMMO);
             spawnLightning(p, location);
-
             p.sendActionBar(Messages.ZAPPER_GUN_BOSS_BAR.getMessage()
                     .replace("{uses}", String.valueOf(uses.get(p.getUniqueId())))
                     .replace("{max_uses}", String.valueOf(maxUses)));

@@ -3,7 +3,6 @@ package com.chalwk.Items;
 
 import com.chalwk.JCSpecials;
 import com.chalwk.util.ItemInteractHandler;
-import com.chalwk.util.Items;
 import com.chalwk.util.Messages;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -36,7 +35,7 @@ public class SmeltersShovel extends SimpleSlimefunItem<ItemInteractHandler> {
 
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("smelters_shovel", 7504, "Smelters Shovel", 35, Items.SMELTERS_SHOVEL);
+        plugin.registerResearch("smelters_shovel", 7504, "Smelters Shovel", 35, SMELTERS_SHOVEL);
         maxUses = cfg.getInt("item-settings.smelters-shovel.uses");
     }
 

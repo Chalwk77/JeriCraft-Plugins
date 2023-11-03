@@ -41,13 +41,11 @@ public class Items {
             new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH),
             new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH), new ItemStack(SlimefunItems.CLOTH)
     };
-
     public static final ItemStack[] witherGunRecipe = {
             null, null, SlimefunItems.BLISTERING_INGOT_3,
             null, new ItemStack(Material.STICK), null,
             SlimefunItems.REINFORCED_ALLOY_INGOT, null, null
     };
-
     public static final ItemStack[] witherGunAmmoRecipe = {
             null, new ItemStack(SlimefunItems.MAGIC_LUMP_3), null,
             new ItemStack(SlimefunItems.MAGIC_LUMP_3), new ItemStack(SlimefunItems.NECROTIC_SKULL), new ItemStack(SlimefunItems.MAGIC_LUMP_3),
@@ -101,7 +99,7 @@ public class Items {
 
     public static SlimefunItemStack WITHER_GUN_AMMO = new SlimefunItemStack(
             "WITHER_GUN_AMMO",
-            SlimefunItems.NECROTIC_SKULL,
+            Material.WITHER_SKELETON_SKULL,
             cfg.getString("messages.items.wither-gun-ammo.name"),
             cfg.getString("messages.items.wither-gun-ammo.description")
     );

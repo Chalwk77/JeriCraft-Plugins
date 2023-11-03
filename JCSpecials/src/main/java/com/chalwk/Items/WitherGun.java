@@ -52,6 +52,9 @@ public class WitherGun extends SlimefunItem {
             if (breakItem(p, location)) return;
             inv.removeItem(WITHER_GUN_AMMO);
             fireProjectile(p, location);
+            p.sendActionBar(Messages.WITHER_GUN_BOSS_BAR.getMessage()
+                    .replace("{uses}", String.valueOf(uses.get(p.getUniqueId())))
+                    .replace("{max_uses}", String.valueOf(maxUses)));
         } else if (!breakItem(p, location)) {
             String itemName = WITHER_GUN_AMMO.getItemMeta().getDisplayName();
             p.playSound(location, Sound.ENTITY_BLAZE_HURT, 1, 1);
@@ -61,9 +64,9 @@ public class WitherGun extends SlimefunItem {
 
     private void fireProjectile(Player p, Location location) {
         p.playSound(location, Sound.ENTITY_WITHER_SHOOT, 1, 1);
-        WitherSkull item = p.launchProjectile(WitherSkull.class);
-        item.setVelocity(p.getLocation().getDirection().multiply(2));
-        item.setYield(10);
+        WitherSkull proj = p.launchProjectile(WitherSkull.class);
+        proj.setYield(25);
+        proj.setVelocity(p.getLocation().getDirection().multiply(2));
     }
 
     private boolean breakItem(Player p, Location location) {

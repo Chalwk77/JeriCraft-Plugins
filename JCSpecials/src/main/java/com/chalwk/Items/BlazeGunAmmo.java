@@ -2,18 +2,19 @@
 package com.chalwk.Items;
 
 import com.chalwk.JCSpecials;
-import com.chalwk.util.Items;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import org.bukkit.inventory.ItemStack;
 
+import static com.chalwk.util.Items.BLAZE_GUN_AMMO;
+
 public class BlazeGunAmmo extends SlimefunItem {
 
     public BlazeGunAmmo(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("blaze_gun_ammo", 7501, "Blaze Gun Ammo", 10, Items.BLAZE_GUN_AMMO);
+        plugin.registerResearch("blaze_gun_ammo", 7501, "Blaze Gun Ammo", 10, BLAZE_GUN_AMMO);
     }
 }

@@ -2,7 +2,6 @@
 package com.chalwk.Items;
 
 import com.chalwk.JCSpecials;
-import com.chalwk.util.Items;
 import com.chalwk.util.Messages;
 import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -32,7 +31,7 @@ public class BlazeGun extends SlimefunItem {
     public BlazeGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("blaze_gun", 7500, "Blaze Gun", 20, Items.BLAZE_GUN);
+        plugin.registerResearch("blaze_gun", 7500, "Blaze Gun", 20, BLAZE_GUN);
         maxUses = cfg.getInt("item-settings.blaze-gun.uses");
     }
 
@@ -65,10 +64,10 @@ public class BlazeGun extends SlimefunItem {
 
     private void fireProjectile(Player p, Location location) {
         p.playSound(location, Sound.ENTITY_BLAZE_SHOOT, 1, 1);
-        Fireball fireball = p.launchProjectile(Fireball.class);
-        fireball.setVelocity(location.getDirection().multiply(2));
-        fireball.setYield(5);
-        fireball.setIsIncendiary(false);
+        Fireball proj = p.launchProjectile(Fireball.class);
+        proj.setVelocity(location.getDirection().multiply(2));
+        proj.setYield(5);
+        proj.setIsIncendiary(false);
     }
 
     private boolean breakItem(Player p, Location location) {
