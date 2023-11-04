@@ -1,4 +1,4 @@
-# JeriCraft Player Commands (WIP):
+# JeriCraft Player Commands:
 
 This list is periodically updated. If you find any errors or omissions, please contact a member of the staff team.
 
