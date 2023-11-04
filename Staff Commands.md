@@ -2,6 +2,16 @@
 
 This list is periodically updated. If you find any errors or omissions, please contact a member of the staff team.
 
+JeriCraft uses a hierarchy of ranks to organize staff members. The ranks are as follows:
+
+- **Trial-Mod** - Trial Moderator
+- **Moderator** - Moderator
+- **Admin** - Administrator
+- **Owner** - Owner
+
+Each rank has access to all commands of the ranks below it. For example, Moderators have access to all commands that
+Trial-Mods have access to, and Admins have access to all commands that Moderators and Trial-Mods have access to.
+
 | Rank      | Command                                                                                                            | Description                                                                                                                            | Permission Node(s)                                                                                                     |
 |-----------|--------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | Trial-Mod | kick `[name]` `(reason)`                                                                                           | Kick player from server (with optional reason)                                                                                         | cmi.command.kick                                                                                                       |
