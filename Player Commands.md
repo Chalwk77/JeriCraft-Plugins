@@ -14,4 +14,7 @@ This list is periodically updated. If you find any errors or omissions, please c
 | Guest | sell `(all/blocks/hand/same/gui)`       | Sells items from your inventory                                                                         | cmi.command.sell, cmi.command.sell.material |
 | Guest | sethome `(homeName)` `(block/Material)` | Sets a home at your current location. If a block is specified, the home icon will be set to that block. | cmi.command.sethome                         |
 | Guest | home `(homeName)`                       | Teleports you to your home                                                                              | cmi.command.home                            |
+| Guest | homes                                   | Lists all your homes                                                                                    | cmi.command.homes                           |
 | Guest | removehome `(homeName)`                 | Deletes your home                                                                                       | cmi.command.removehome                      |
+| Guest | pay `[name]` `[amount]`                 | Pay another player money from your balance                                                              | cmi.command.pay                             |
+| Guest | ender                                   | Opens your ender chest                                                                                  | cmi.command.ender                           |
