@@ -52,7 +52,7 @@ public class Items {
             null, new ItemStack(SlimefunItems.MAGIC_LUMP_3), null
     };
 
-    /* ITEMS STACKS: */
+    /* WEAPONS */
     public static SlimefunItemStack BLAZE_GUN = new SlimefunItemStack(
             "BLAZE_GUN",
             Material.BLAZE_ROD,
@@ -77,18 +77,6 @@ public class Items {
             cfg.getString("messages.items.zapper-gun-ammo.name"),
             cfg.getString("messages.items.zapper-gun-ammo.description")
     );
-    public static SlimefunItemStack SMELTERS_SHOVEL = new SlimefunItemStack(
-            "SMELTERS_SHOVEL",
-            Material.NETHERITE_SHOVEL,
-            cfg.getString("messages.items.smelters-shovel.name"),
-            cfg.getString("messages.items.smelters-shovel.description")
-    );
-    public static SlimefunItemStack SPONGE = new SlimefunItemStack(
-            "SPONGE",
-            Material.SPONGE,
-            cfg.getString("messages.items.sponge.name"),
-            cfg.getString("messages.items.sponge.description")
-    );
     public static SlimefunItemStack WITHER_GUN = new SlimefunItemStack(
             "WITHER_GUN",
             Material.BLAZE_ROD,
@@ -100,5 +88,21 @@ public class Items {
             Material.WITHER_SKELETON_SKULL,
             cfg.getString("messages.items.wither-gun-ammo.name"),
             cfg.getString("messages.items.wither-gun-ammo.description")
+    );
+
+    /* TOOLS */
+    public static SlimefunItemStack SMELTERS_SHOVEL = new SlimefunItemStack(
+            "SMELTERS_SHOVEL",
+            Material.NETHERITE_SHOVEL,
+            cfg.getString("messages.items.smelters-shovel.name"),
+            cfg.getString("messages.items.smelters-shovel.description")
+    );
+
+    /* MISC */
+    public static SlimefunItemStack SPONGE = new SlimefunItemStack(
+            "SPONGE",
+            Material.SPONGE,
+            cfg.getString("messages.items.sponge.name"),
+            cfg.getString("messages.items.sponge.description")
     );
 }
