@@ -31,7 +31,7 @@ public class BlazeGun extends SlimefunItem {
     public BlazeGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("blaze_gun", 7500, "Blaze Gun", 20, BLAZE_GUN);
+        plugin.registerResearch("blaze_gun", 7500, "Blaze Gun", 20, item);
         maxUses = cfg.getInt("item-settings.blaze-gun.uses");
     }
 
@@ -67,7 +67,7 @@ public class BlazeGun extends SlimefunItem {
         Fireball proj = p.launchProjectile(Fireball.class);
         proj.setVelocity(location.getDirection().multiply(2));
         proj.setYield(5);
-        proj.setIsIncendiary(false);
+        proj.setIsIncendiary(true);
     }
 
     private boolean breakItem(Player p, Location location) {

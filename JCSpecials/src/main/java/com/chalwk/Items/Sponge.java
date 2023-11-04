@@ -8,13 +8,11 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import org.bukkit.inventory.ItemStack;
 
-import static com.chalwk.util.Items.SPONGE;
-
 public class Sponge extends SlimefunItem {
 
     public Sponge(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("sponge", 7505, "Sponge", 10, SPONGE);
+        plugin.registerResearch("sponge", 7505, "Sponge", 10, item);
     }
 }

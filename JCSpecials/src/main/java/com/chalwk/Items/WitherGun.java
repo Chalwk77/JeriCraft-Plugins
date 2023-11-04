@@ -31,7 +31,7 @@ public class WitherGun extends SlimefunItem {
     public WitherGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("wither_gun", 7801, "Wither Gun", 20, WITHER_GUN);
+        plugin.registerResearch("wither_gun", 7801, "Wither Gun", 20, item);
         maxUses = cfg.getInt("item-settings.wither-gun.uses");
     }
 
@@ -66,7 +66,8 @@ public class WitherGun extends SlimefunItem {
         p.playSound(location, Sound.ENTITY_WITHER_SHOOT, 1, 1);
         WitherSkull proj = p.launchProjectile(WitherSkull.class);
         proj.setYield(25);
-        proj.setVelocity(p.getLocation().getDirection().multiply(2));
+        proj.setIsIncendiary(true);
+        proj.setVelocity(location.getDirection().multiply(2));
     }
 
     private boolean breakItem(Player p, Location location) {

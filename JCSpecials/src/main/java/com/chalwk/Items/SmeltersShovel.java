@@ -35,7 +35,7 @@ public class SmeltersShovel extends SimpleSlimefunItem<ItemInteractHandler> {
 
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("smelters_shovel", 7504, "Smelters Shovel", 35, SMELTERS_SHOVEL);
+        plugin.registerResearch("smelters_shovel", 7504, "Smelters Shovel", 35, item);
         maxUses = cfg.getInt("item-settings.smelters-shovel.uses");
     }
 

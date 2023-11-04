@@ -8,13 +8,11 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import org.bukkit.inventory.ItemStack;
 
-import static com.chalwk.util.Items.ZAPPER_GUN_AMMO;
-
 public class ZapperGunAmmo extends SlimefunItem {
 
     public ZapperGunAmmo(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("zapper_gun_ammo", 7507, "Zapper Gun Ammo", 10, ZAPPER_GUN_AMMO);
+        plugin.registerResearch("zapper_gun_ammo", 7507, "Zapper Gun Ammo", 10, item);
     }
 }

@@ -8,13 +8,11 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import org.bukkit.inventory.ItemStack;
 
-import static com.chalwk.util.Items.WITHER_GUN_AMMO;
-
 public class WitherGunAmmo extends SlimefunItem {
 
     public WitherGunAmmo(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("wither_gun_ammo", 7800, "Wither Gun Ammo", 10, WITHER_GUN_AMMO);
+        plugin.registerResearch("wither_gun_ammo", 7800, "Wither Gun Ammo", 10, item);
     }
 }

@@ -37,7 +37,7 @@ public class ZapperGun extends SlimefunItem {
     public ZapperGun(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, JCSpecials plugin) {
         super(itemGroup, item, recipeType, recipe);
         this.register(plugin);
-        plugin.registerResearch("zapper_gun", 7506, "Zapper Gun", 20, ZAPPER_GUN);
+        plugin.registerResearch("zapper_gun", 7506, "Zapper Gun", 20, item);
         maxUses = cfg.getInt("item-settings.zapper-gun.uses");
     }
 
