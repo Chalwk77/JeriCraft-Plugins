@@ -25,3 +25,6 @@ This list is periodically updated. If you find any errors or omissions, please c
 | Guest | rankinfo                                | Shows info about your current rank                                                                      | cmi.command.rankinfo                        |
 | Guest | suicide                                 | Kill yourself                                                                                           | cmi.command.suicide                         |
 | Guest | rt                                      | Teleports to a random location                                                                          | cmi.command.rt                              |
+| Guest | afk (reason)                            | Toggle afk mode. Reason can be provided                                                                 | cmi.command.afk                             |
+| Guest | mail `[send/clear/read]` `(message)`    | Send and receive mail                                                                                   | cmi.command.mail, cmi.command.mail.send     |
+| Guest | msg `[name]` `(message)`                | Sends message to player                                                                                 | cmi.command.msg, cmi.command.reply          |
