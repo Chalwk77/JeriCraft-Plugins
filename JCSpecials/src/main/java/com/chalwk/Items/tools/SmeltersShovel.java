@@ -1,5 +1,5 @@
 /* Copyright (c) 2023, JCSpecials. Jericho Crosby <jericho.crosby227@gmail.com> */
-package com.chalwk.Items;
+package com.chalwk.Items.tools;
 
 import com.chalwk.JCSpecials;
 import com.chalwk.util.ItemInteractHandler;

@@ -1,7 +1,9 @@
 /* Copyright (c) 2023, JCSpecials. Jericho Crosby <jericho.crosby227@gmail.com> */
 package com.chalwk;
 
-import com.chalwk.Items.*;
+import com.chalwk.Items.misc.Sponge;
+import com.chalwk.Items.tools.SmeltersShovel;
+import com.chalwk.Items.weapons.*;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.NestedItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.SubItemGroup;
@@ -19,16 +21,13 @@ public final class Setup {
             new CustomItemStack(Material.GOLDEN_SWORD, "&4JC Specials", "", "&a> Click to open"));
     private static final ItemGroup weapons = new SubItemGroup(
             new NamespacedKey(JCSpecials.getInstance(), "weapons"), parentCategory,
-            new CustomItemStack(Material.DIAMOND_SWORD, "&aWeapons"), 1
-    );
+            new CustomItemStack(Material.DIAMOND_SWORD, "&aWeapons"), 1);
     private static final ItemGroup misc = new SubItemGroup(
             new NamespacedKey(JCSpecials.getInstance(), "misc"), parentCategory,
-            new CustomItemStack(Material.HOPPER, "&aMisc"), 2
-    );
+            new CustomItemStack(Material.HOPPER, "&aMisc"), 2);
     private static final ItemGroup tools = new SubItemGroup(
             new NamespacedKey(JCSpecials.getInstance(), "tools"), parentCategory,
-            new CustomItemStack(Material.DIAMOND_PICKAXE, "&aTools"), 3
-    );
+            new CustomItemStack(Material.DIAMOND_PICKAXE, "&aTools"), 3);
 
     Setup(JCSpecials plugin, boolean debug) {
 
