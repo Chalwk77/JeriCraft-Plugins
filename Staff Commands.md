@@ -1,5 +1,7 @@
 # JeriCraft Staff Commands:
 
+This list is periodically updated. If you find any errors or omissions, please contact a member of the staff team.
+
 | Rank      | Command    | Description                                                                        | Permission Node(s)                                                                                                     |
 |-----------|------------|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | Trial-Mod | kick       | Kick player from server (with optional message)                                    | cmi.command.kick                                                                                                       |
