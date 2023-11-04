@@ -18,3 +18,10 @@ This list is periodically updated. If you find any errors or omissions, please c
 | Guest | removehome `(homeName)`                 | Deletes your home                                                                                       | cmi.command.removehome                      |
 | Guest | pay `[name]` `[amount]`                 | Pay another player money from your balance                                                              | cmi.command.pay                             |
 | Guest | ender                                   | Opens your ender chest                                                                                  | cmi.command.ender                           |
+| Guest | prewards                                | Shows playtime rewards                                                                                  | cmi.command.prewards                        |
+| Guest | stats                                   | Shows your stats                                                                                        | cmi.command.stats                           |
+| Guest | ranklist                                | Shows list of possible ranks                                                                            | cmi.command.ranklist                        |
+| Guest | rankup                                  | Ranks you up                                                                                            | cmi.command.rankup                          |
+| Guest | rankinfo                                | Shows info about your current rank                                                                      | cmi.command.rankinfo                        |
+| Guest | suicide                                 | Kill yourself                                                                                           | cmi.command.suicide                         |
+| Guest | rt                                      | Teleports to a random location                                                                          | cmi.command.rt                              |
