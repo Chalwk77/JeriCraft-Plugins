@@ -89,14 +89,12 @@ public class Items {
             cfg.getString("messages.items.sponge.name"),
             cfg.getString("messages.items.sponge.description")
     );
-
     public static SlimefunItemStack WITHER_GUN = new SlimefunItemStack(
             "WITHER_GUN",
             Material.BLAZE_ROD,
             cfg.getString("messages.items.wither-gun.name"),
             cfg.getString("messages.items.wither-gun.description")
     );
-
     public static SlimefunItemStack WITHER_GUN_AMMO = new SlimefunItemStack(
             "WITHER_GUN_AMMO",
             Material.WITHER_SKELETON_SKULL,
