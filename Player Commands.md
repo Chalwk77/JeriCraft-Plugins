@@ -8,8 +8,8 @@ JeriCraft uses a hierarchy of ranks to organize players. The ranks are as follow
   as `/msg`, `/tpa`, `/warp`, etc.
 - **Member**: The rank that players are promoted to after 1 month of playtime (or by joining our Discord Server).
   Members have access to all commands that Guests have access to, as well as some additional commands, such
-- **Builder**: Builders have access World Edit and Creative mode (application required).
   as `/setwarp`, `/hat`, `/sit`, etc.
+- **Builder**: Builders have access World Edit and Creative mode (application required).
 - **Squire** (donor rank) The rank players are promoted to after spending $1-$19 on our web store.
 - **Titan** (donor rank) The rank players are promoted to after spending $20-$39 on our web store.
 - **Mortal** (donor rank) The rank players are promoted to after spending $40-$59 on our web store.
