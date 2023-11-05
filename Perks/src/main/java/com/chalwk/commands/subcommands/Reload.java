@@ -29,7 +29,7 @@ public class Reload extends SubCommand {
         if (args.length == 1) {
             getInstance().reloadConfig();
             send(sender, "&8=============================");
-            send(sender, "&3JeriCraftPerks reloaded!");
+            send(sender, "&3Perks reloaded!");
             send(sender, "&8=============================");
         } else {
             send(sender, "&8=============================");

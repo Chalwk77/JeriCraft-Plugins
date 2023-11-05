@@ -1,4 +1,4 @@
-name: JeriCraftPerkGUI
+name: Perks
 version: '${project.version}'
 main: com.chalwk.Perks
 api-version: '1.20'

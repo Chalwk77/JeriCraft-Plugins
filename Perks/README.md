@@ -1,4 +1,4 @@
-# JeriCraft Perks GUI
+# Perks
 
 #### The official JeriCraft Perks GUI Plugin.
 
@@ -15,4 +15,4 @@ Additional commands coming soon!
 
 #### Total perks: 84 perks as of 14/10/23
 
-Copyright (c) 2023, JeriCraftPerks. Jericho Crosby <jericho.crosby227@gmail.com>
+Copyright (c) 2023, Perks. Jericho Crosby <jericho.crosby227@gmail.com>
