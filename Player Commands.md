@@ -1,38 +1,3 @@
-//set
-worldedit.region.set
-//line
-worldedit.region.line
-//curve
-worldedit.region.curve
-//replace
-worldedit.region.replace
-//overlay
-worldedit.region.overlay
-//center
-worldedit.region.center
-//naturalize
-worldedit.region.naturalize
-//walls
-worldedit.region.walls
-//faces
-worldedit.region.faces
-//smooth
-worldedit.region.smooth
-//move
-worldedit.region.move
-//stack
-worldedit.region.stack
-//regen
-worldedit.regen
-//deform
-worldedit.region.deform
-//hollow
-worldedit.region.hollow
-//forest
-worldedit.region.forest
-//flora
-worldedit.region.flora
-
 # JeriCraft Player Commands:
 
 This list is periodically updated. If you find any errors or omissions, please contact a member of the staff team.
@@ -148,6 +113,8 @@ Guests have access to, and Squire has access to all commands that Members and Gu
 | Builder | //regen `[-s]` `[seed]`                                               | Regenerates the contents of the selection                                                                                                                                                                                                    | worldedit.regen                                                                 |
 | Builder | //deform `[-cor]` `<expression...>`                                   | Deforms the selection                                                                                                                                                                                                                        | worldedit.region.deform                                                         |
 | Builder | //hollow `[thickness]` `[pattern]`                                    | Hollows out the selection                                                                                                                                                                                                                    | worldedit.region.hollow                                                         |
+| Builder | //forest `[type]` `[density]`                                         | Grows a forest                                                                                                                                                                                                                               | worldedit.region.forest                                                         |
+| Builder | //flora `[type]` `[density]`                                          | Grows flora                                                                                                                                                                                                                                  | worldedit.region.flora                                                          |
 | Squire  | kit `squire`                                                          | Gives you the Squire kit                                                                                                                                                                                                                     | cmi.kit.squire                                                                  |
 | Titan   | kit `titan`                                                           | Gives you the Titan kit                                                                                                                                                                                                                      | cmi.kit.titan                                                                   |
 | Mortal  | kit `mortal`                                                          | Gives you the Mortal kit                                                                                                                                                                                                                     | cmi.kit.mortal                                                                  |
