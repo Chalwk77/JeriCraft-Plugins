@@ -167,20 +167,30 @@ Guests have access to, and Squire has access to all commands that Members and Gu
 | Builder | replacenear `<radius>` `[from]` `<to>`                             | Replaces all blocks near you                                                                 | `worldedit.replacenear`                     |
 | Builder | calculate `<input...>`                                             | Evaluate a mathematical expression                                                           | `worldedit.calc`                            |
 
+----
+
 | Rank   | Command      | Description              | Node             |
 |--------|--------------|--------------------------|------------------|
 | Squire | kit `squire` | Gives you the Squire kit | `cmi.kit.squire` |
 
+----
+
 | Rank | Command | Description | Node |
 |------|---------|-------------|------|
+
+----
 
 | Rank  | Command     | Description             | Node            |
 |-------|-------------|-------------------------|-----------------|
 | Titan | kit `titan` | Gives you the Titan kit | `cmi.kit.titan` |
 
+----
+
 | Rank   | Command      | Description              | Node             |
 |--------|--------------|--------------------------|------------------|
 | Mortal | kit `mortal` | Gives you the Mortal kit | `cmi.kit.mortal` |
+
+----
 
 | Rank  | Command     | Description             | Node            |
 |-------|-------------|-------------------------|-----------------|
