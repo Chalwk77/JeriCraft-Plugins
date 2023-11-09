@@ -25,10 +25,10 @@ Perks that don't have commands are not listed here.
 | Night Vision          | nv                                                              |
 | Sign Copy             | sc                                                              |
 | Head Database         | hdb                                                             |
-| Slimefun Kit (ingots) | kit sf_ingots                                                   |
-| Slimefun Kit (dust)   | kit sf_dust                                                     |
-| Kit Glass             | kit glass                                                       |
-| Kit Terracotta        | kit terracotta                                                  |
-| Kit banner            | kit banner                                                      |
-| Kit Wool              | kit wool                                                        |
-| Kit Pyro              | kit pyro                                                        |
+| Slimefun Kit (ingots) | kit `sf_ingots`                                                 |
+| Slimefun Kit (dust)   | kit `sf_dust`                                                   |
+| Kit Glass             | kit `glass`                                                     |
+| Kit Terracotta        | kit `terracotta`                                                |
+| Kit banner            | kit `banner`                                                    |
+| Kit Wool              | kit `wool`                                                      |
+| Kit Pyro              | kit `pyro`                                                      |
