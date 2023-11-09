@@ -35,8 +35,8 @@ CATEGORIES:
             - " "
             - "&aAllows you to exceed our 1M block claim limitation."
             - "&aAlso grants unlimited claims."
-        coloured_name:
-          name: "&b&lColoured Name"
+        cmi.command.nickname:
+          name: "&b&lCustom Nickname"
           icon: "LIME_WOOL"
           price: 5
           lore:
@@ -50,7 +50,7 @@ CATEGORIES:
           price: 10
           lore:
             - "&7Type: &aSurvival Perk"
-            - "&7Price: &a$10"
+            - "&7Price: &a$5"
             - " "
             - "&aGet a cool custom name prefix of your choosing."
             - "&aIncludes custom colour codes!"
@@ -62,7 +62,7 @@ CATEGORIES:
           price: 10
           lore:
             - "&7Type: &aSurvival Perk"
-            - "&7Price: &a$10"
+            - "&7Price: &a$5"
             - " "
             - "&aGet a cool custom name suffix of your choosing."
             - "&aIncludes custom colour codes!"
