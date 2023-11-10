@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BigBrother/BigBrother.iml" filepath="$PROJECT_DIR$/BigBrother/BigBrother.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ChatGames/ChatGames.iml" filepath="$PROJECT_DIR$/ChatGames/ChatGames.iml" />
       <module fileurl="file://$PROJECT_DIR$/HealMe/HealMe.iml" filepath="$PROJECT_DIR$/HealMe/HealMe.iml" />
       <module fileurl="file://$PROJECT_DIR$/JCSpecials/JCSpecials.iml" filepath="$PROJECT_DIR$/JCSpecials/JCSpecials.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JeriCraft-Plugins.iml" filepath="$PROJECT_DIR$/.idea/JeriCraft-Plugins.iml" />
