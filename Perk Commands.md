@@ -4,7 +4,7 @@ Perks that don't have commands are not listed here.
 |-----------------------|-----------------------------------------------------------------|
 | Custom Nickname       | nick `[newNickName/off]`                                        |
 | Creative Mode         | gm `c`, gm `s`                                                  | 
-| Extinguish            | extinguish                                                      |
+| Extinguish            | ext                                                             |
 | Clear Inventory       | clear                                                           |
 | Feed                  | feed                                                            |
 | Fly                   | fly                                                             |
