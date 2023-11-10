@@ -16,7 +16,7 @@ Slimefun adds hundreds of hours of new content to Minecraft,
 and is an amazing addon to the base survival experience.
 ```
 
-Slimefun Addons:
+Our Slimefun Addons:
 
 | Addon Name        | Project Page                                                    |
 |-------------------|-----------------------------------------------------------------|
@@ -112,6 +112,13 @@ Adds realistic seasons (Spring, Summer, Autumn & Winter) to our Survival world.
 
 ```
 ChestShop is a simple, yet very powerful system for making physical shops using signs and chests.
+```
+
+### [LevelledMobs](https://www.spigotmc.org/resources/levelledmobs.74304/)
+
+```
+LevelledMobs is a plugin that allows mobs to level up and become stronger as they kill players.
+See link above for a full list of features.
 ```
 
 ### [WorldGuard](https://enginehub.org/worldguard)
