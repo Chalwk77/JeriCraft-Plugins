@@ -20,6 +20,8 @@ Perks that don't have commands are not listed here.
 | Vanish                | vanish                                                          |
 | Portable Workbench    | workbench                                                       |
 | Portable loom         | loom                                                            |
+| Portable Anvil        | anvil                                                           |
+| Portable Grindstone   | grindstone                                                      |
 | Me                    | me                                                              |
 | Merchant              | merchant `[type]` `(level)`                                     |
 | Night Vision          | nv                                                              |
