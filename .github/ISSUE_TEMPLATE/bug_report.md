@@ -1,38 +1,18 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+name: 🐞 Bug or error report
+description: Report an anomaly or unexpected behaviour on our server
+labels: ['Needs: Triage :mag:', 'type:bug-suspected']
 
----
+body:
+- type: markdown
+  attributes:
+  value: |
+  - [x] Bug
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+      Thank you for reporting a bug! Use the sections below to submit a bug **only** if it's related to the JeriCraft Minecraft server. If you have a question, please use the [Discord server](https://discord.gg/vcyM6epaqg) instead. 
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+      - All bug reports are welcome - we want to fix them!
+      - Remember to include sufficient details and context.
+      - If you have multiple questions, suggestions, or bugs, please submit them in separate issues.
+      - We accept pull requests. If you know how to fix it - go ahead! If you know how to make it - go ahead!
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+      Please provide the following details about the issue you encountered.  *Issues that do not provide the information requested in this form will be flagged as **incomplete** & automatically closed.*
