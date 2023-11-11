@@ -17,8 +17,11 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ChatGames" target="1.8" />
+      <module name="DiscordBot" target="1.8" />
       <module name="ExtraWeapons" target="1.8" />
       <module name="Feed" target="1.8" />
+      <module name="JCDiscordBot" target="1.8" />
+      <module name="JeriCraft" target="1.8" />
       <module name="JeriCraftPerkGUI" target="1.8" />
       <module name="magnet" target="1.8" />
       <module name="TacInsert" target="1.8" />

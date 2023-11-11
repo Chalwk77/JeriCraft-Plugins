@@ -12,11 +12,12 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
+
 public class JCSpecials extends JavaPlugin implements SlimefunAddon {
 
     public static Config cfg;
-    private static JCSpecials instance;
     public static boolean debug = true;
+    private static JCSpecials instance;
 
     public static JCSpecials getInstance() {
         return instance;

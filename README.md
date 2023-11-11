@@ -7,7 +7,7 @@ This repository also serves as a place to list Player/Admin commands and permiss
 # Plugin List:
 - [x] [BigBrother]
 - [x] [Healme]
-- [x] JCSpecials (Slimefun4 addons)
+- [x] [JCSpecials] (Slimefun4 addons)
 - [x] [Magnet]
 - [x] [Night Vision]
 - [x] [Perks]
